@@ -1,0 +1,29 @@
+#topnav {
+    max-width: 100%;
+    display: flex;
+    gap: 3%;
+    padding: 5px 4% 5px 4%;
+    font-size: 14px;
+    justify-content: center;
+    background-color: white;
+}
+
+#search {
+    width: 45%;
+    justify-content: center;
+}
+
+#searchBox {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(222, 222, 222);
+    border: none;
+    justify-content: center;
+}
+
+@media (max-width: 800px){
+    #search, #lybrateCashLogo {
+        display: none;
+    }
+
+}

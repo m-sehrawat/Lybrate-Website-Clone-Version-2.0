@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/finddoctors.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/topNavbar.css">
+    <title>Find Doctors</title>
+
+
+</head>
+
+<body>
+
+    <div id="topHeaderDisplay"></div>
+
+    <!-- Navigation for different tabs -->
+    <div id="navbarComponents" class="container upperBox mt-4"></div>
+
+
+    <!-- Health Feed -->
+    <div class="container upperBox mt-5">
+        <div class="row">
+            <div class="col-8">
+                <!-- Display Fetch Data Div -->
+                <div class="row">
+                    <!-- Display Gold Membership Div -->
+                    <div id="showGoldmembershipDiv" class="col-12 mb-3 border shadow" style="height: 100px; background-color: #c8df95; cursor: pointer;"></div>
+
+                    <!-- Doctors Details -->
+                    <!-- first Div -->
+                    <div class="col-12 border px-0 mb-3 shadow" style="background-color: white; ">
+                        <div class="row py-4">
+                            <div id="box1" class="col-2"></div>
+                            <div id="box2" class="col-7"></div>
+                            <div id="box3" class="col-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-grid pe-0">
+                                <button class="btn btn-color py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                    </svg>
+                                    Call Doctor
+                                </button>
+                            </div>
+                            <div class="col d-grid px-0">
+                                <button class="btn btn-color py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                                        <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                    </svg>
+                                    Consult Online
+                                </button>
+                            </div>
+                            <div class="col d-grid ps-0">
+                                <button class="btn btn-success py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                    </svg>
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Div -->
+                    <div class="col-12 border px-0 mb-3 shadow" style="background-color: white; ">
+                        <div class="row py-4">
+                            <div id="box4" class="col-2"></div>
+                            <div id="box5" class="col-7"></div>
+                            <div id="box6" class="col-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-grid pe-0">
+                                <button class="btn btn-color py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                    </svg>
+                                    Call Doctor
+                                </button>
+                            </div>
+                            <div class="col d-grid px-0">
+                                <button class="btn btn-color py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                                        <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                    </svg>
+                                    Consult Online
+                                </button>
+                            </div>
+                            <div class="col d-grid ps-0">
+                                <button class="btn btn-success py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                    </svg>
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Div -->
+                    <div class="col-12 border px-0 mb-3 shadow" style="background-color: white; ">
+                        <div class="row py-4">
+                            <div id="box7" class="col-2"></div>
+                            <div id="box8" class="col-7"></div>
+                            <div id="box9" class="col-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-grid pe-0">
+                                <button class="btn btn-color py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                    </svg>
+                                    Call Doctor
+                                </button>
+                            </div>
+                            <div class="col d-grid px-0">
+                                <button class="btn btn-color py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                                        <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                    </svg>
+                                    Consult Online
+                                </button>
+                            </div>
+                            <div class="col d-grid ps-0">
+                                <button class="btn btn-success py-3 border rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                    </svg>
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="bookAppointmentSection" class="col-4"></div>
+        </div>
+    </div>
+
+    <div class="mt-5" id="footerDisplay"></div>
+
+</body>
+
+</html>
+
+<script type="module">
+    // --------------------Calling HTML elements------------------------
+    let navbarComponents = document.getElementById('navbarComponents');
+    let showGoldmembershipDiv = document.getElementById('showGoldmembershipDiv');
+    let bookAppointmentSection = document.getElementById('bookAppointmentSection');
+    let topHeaderDisplay = document.getElementById('topHeaderDisplay');
+    let footerDisplay = document.getElementById('footerDisplay');
+
+    // --------------------Importing HTML Contents------------------------
+    import topHeader from './JS/topHeader.js'
+    import footer from './JS/footer.js';
+    import { bottomNavbar, appointmentSection, showGoldMembership } from './JS/feedPage.js'
+
+    // Display Top Navbar
+    topHeader().then((response) => {
+        topHeaderDisplay.innerHTML = response;
+    })
+
+    // Display bottom navbar
+    bottomNavbar().then((response) => {
+        navbarComponents.innerHTML = response;
+    })
+
+    // Display Gold membership Div
+    showGoldMembership().then((response) => {
+        showGoldmembershipDiv.innerHTML = response;
+    })
+
+    // Display Book Appointment Div
+    appointmentSection().then((response) => {
+        bookAppointmentSection.innerHTML = response;
+    })
+
+     // Display Footer
+     footer().then((response) => {
+        footerDisplay.innerHTML = response;
+    })
+</script>
+
+
+
+<script>
+
+    // --------------------Calling HTML elements------------------------
+    let box1 = document.getElementById('box1');
+    let box2 = document.getElementById('box2');
+    let box3 = document.getElementById('box3');
+    let box4 = document.getElementById('box4');
+    let box5 = document.getElementById('box5');
+    let box6 = document.getElementById('box6');
+    let box7 = document.getElementById('box7');
+    let box8 = document.getElementById('box8');
+    let box9 = document.getElementById('box9');
+
+
+// --------------------Fetching data from own server------------------------
+    let newsVariable = localStorage.getItem('newsTopic');
+    
+    async function fetchData() {
+
+        let response = await fetch(`http://localhost:2000/api/feedData`);
+
+        let data = await response.json();
+
+        data = data[newsVariable].findDoctors;
+
+        appendData(data);
+    }
+    // Calling Fetch Function
+    fetchData()
+
+
+
+
+    // --------------------Appending Data into the Div------------------------
+    function appendData(data) {
+
+        for (let i = 0; i < data.length; i++) {
+
+            let head = document.createElement('h5');
+            head.textContent = data[i].heading;
+            head.setAttribute('class', 'fw-bolder m-2');
+
+            let image = document.createElement('img');
+            image.src = data[i].img;
+            image.setAttribute('class', 'img-fluid my-3 rounded-circle');
+
+            let desc = document.createElement('div');
+            data[i].description.forEach((el) => {
+                let p = document.createElement('p');
+                p.textContent = el;
+                p.setAttribute('class', 'm-0')
+                desc.append(p);
+            })
+
+            let extra = document.createElement('div');
+            extra.setAttribute('class', 'mt-2')
+            data[i].extraDetails.forEach((el) => {
+                let p = document.createElement('p');
+                p.textContent = el;
+                p.setAttribute('class', 'm-0')
+                extra.append(p);
+            })
+
+            if (i == 0) {
+                box1.append(image);
+                box2.append(head, desc);
+                box3.append(extra);
+            } else if (i == 1) {
+                box4.append(image);
+                box5.append(head, desc);
+                box6.append(extra);
+            } else if (i == 2) {
+                box7.append(image);
+                box8.append(head, desc);
+                box9.append(extra);
+            }
+        };
+    }
+
+    // ------------Navbar Functions----------------------
+    function displayNews(name) {
+        localStorage.setItem('newsTopic', name);
+        window.location.href = "aboutPage.html";
+    }
+
+    function bookAppointment(name) {
+        localStorage.setItem('newsTopic', name);
+        window.location.href = "findDoctors.html";
+    }
+
+</script>

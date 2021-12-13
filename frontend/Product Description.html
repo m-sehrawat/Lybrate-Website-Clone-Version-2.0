@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/smallHeader.css">
+    <title>Product Description</title>
+
+    <style>
+        * {
+            font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .maxWidth {
+            max-width: 1250px;
+        }
+
+        /* div {
+            border: 1px solid red;
+        } */
+
+        .mainBox {
+            height: 600px;
+        }
+
+        .smallImgBox {
+            height: 130px;
+            overflow: hidden;
+        }
+
+        #deliveryCheck {
+            border: hidden;
+        }
+
+        #productCompany {
+            height: 30px;
+        }
+
+        #productName {
+            height: 50px;
+        }
+
+        #productPrice {
+            height: 90px;
+        }
+
+        .priceColor {
+            color: green;
+            font-size: 14px;
+        }
+
+        #goldMember {
+            background-color: #f8f8f8;
+            box-shadow: 0px 0px 4px 1px rgb(173, 173, 173);
+        }
+
+        #goldMember:hover {
+            cursor: pointer;
+            transform: scale(1.001);
+            box-shadow: 0px 0px 12px 2px rgb(173, 173, 173);
+        }
+
+        .deliveryFontColor {
+            color: #7a8090;
+        }
+
+        .colorGrey {
+            color: rgb(156, 156, 156);
+            font-size: small;
+            padding-left: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="headerDisplay"></div>
+
+    <div class="container maxWidth">
+
+        <div class="row">
+            <!-- Image Div -->
+            <div class="col-lg mainBox m-2">
+
+                <div class="row">
+                    <div class="col-3">
+                        <div id="imgBox1" onclick="displayImage(imgBox1.innerHTML)" class="col mt-4 smallImgBox border rounded"></div>
+                        <div id="imgBox2" onclick="displayImage(imgBox2.innerHTML)" class="col mt-4 smallImgBox border rounded"></div>
+                        <div id="imgBox3" onclick="displayImage(imgBox3.innerHTML)" class="col mt-4 smallImgBox border rounded"></div>
+                    </div>
+
+                    <div id="productImage" class="col-9" style="height: 500px; overflow: hidden;"></div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3" style="height: 60px;"></div>
+                    <div class="col d-grid">
+                        <button onclick="addProductsToCart()" class="btn btn-lg btn-outline-danger">ADD TO CART</button>
+                    </div>
+                    <div class="col d-grid">
+                        <button class="btn btn-lg btn-success"><a class="text-white" href="cart.html">BUY NOW</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Div -->
+            <div class="col-lg mainBox m-3">
+
+                <div id="productCompany">
+                   
+                </div>
+                <div id="productName"></div>
+                <div id="productPrice">
+                    <p class="priceColor fw-bold">Special Price</p>
+                </div>
+                <a class="text-black" href="goldmembership.html">
+                    <div id="goldMember" class="mx-1 my-4 px-3 border rounded-3">
+                        <p class=" m-0 fw-bold">Become a <span style="color: #9b8338;">Gold member</span> today and you get
+                            this for <span style="color: #c82506;">Free</span> using bonus LybrateCash</p>
+                        <p class="text-black-50 m-1">Also get ₹516 LybrateCash for your future purchases</p>
+                    </div>
+                </a>
+                <div class="deliveryFontColor">
+                    <div id="detailsDiv"></div>
+                    <p class="mt-0 mb-2 fw-bold " style="font-size: 13px;">Expiry Date: 31-Jan-2023</p>
+                    <p class="m-1 ms-4 ">Free Shipping Applicable</p>
+                    <p class="m-1 ms-4 ">Cash on delivery available</p>
+                </div>
+                <div class="my-3 p-2 deliveryFontColor">
+                    <span>Deliver to</span>
+                    <input type="text" class="border-bottom border-dark " id="deliveryCheck">
+                    <button onclick="pincodeCheck()" class="btn btn-sm btn-outline-secondary">Check</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <p class="colorGrey"><strong>Disclaimer:</strong> While we ensure that all product information on the platform is complete and accurate, however, we advise you not to solely rely on this information. It is recommended to refer to the product manual and/or specifications provided by the manufacturer either on their website or along with the product. This is applicable for all warnings, labels, ingredients and usage directions as well. The use of any information provided on this platform is solely at the user's risk. Nothing contained on this platform shall be considered as medical advice. Consumers are advised to contact the manufacturer for any further information and assistance. The results from the products will vary from person to person, No individual result should be seen as typical.</p>
+
+    <div id="footerDisplay"></div>
+</body>
+
+</html>
+
+<script type="module">
+    // --------------Header Imported-------------------------
+    let headerDisplay = document.getElementById('headerDisplay');
+    import showHeader from './JS/smallHeader.js';
+    showHeader().then((response) => {
+        headerDisplay.innerHTML = response;
+    })
+
+    // --------------Footer Imported-------------------------
+    let footerDisplay = document.getElementById('footerDisplay');
+    import footer from './JS/footer.js';
+    footer().then((response) => {
+        footerDisplay.innerHTML = response;
+    })
+</script>
+
+
+<script>
+    let productCompany =document.getElementById("productCompany");
+    let productImage = document.getElementById("productImage");
+    let productName = document.getElementById("productName");
+    let productPrice = document.getElementById("productPrice");
+    let detailsDiv = document.getElementById("detailsDiv");
+    let imgBox1 = document.getElementById("imgBox1");
+    let imgBox2 = document.getElementById("imgBox2");
+    let imgBox3 = document.getElementById("imgBox3");
+
+
+    let product = JSON.parse(localStorage.getItem("Single_products"));
+    console.log('product:', product)
+
+
+    function displayProducts(data) {
+
+        let { img,  companyname, name, newprice, oldprice, off } = data;
+
+        let image = document.createElement("img");
+        image.src = img[0];
+        image.style = "width:100%"
+        image.setAttribute('class', "img-fluid");
+
+        let img1 = document.createElement("img");
+        img1.src = img[0];
+        img1.style = "width:100%";
+        img1.setAttribute('class', "img-fluid")
+
+        let img2 = document.createElement("img");
+        img2.src = img[1];
+        img2.style = "width:100%";
+        img2.setAttribute('class', "img-fluid")
+
+        let img3 = document.createElement("img");
+        img3.src = img[2];
+        img3.style = "width:100%";
+        img3.setAttribute('class', "img-fluid")
+        
+        let company = document.createElement("p");
+        company.innerText = companyname;
+        company.setAttribute('class', "text-muted");
+        
+        let heading = document.createElement("p");
+        heading.innerText = name;
+        heading.setAttribute('class', "fs-5 fw-bold");
+
+        let details = document.createElement("p");
+        details.innerText = `${name} is a natural and unique formulation to support all the workout and normal activities of athletes, gymers, bodybuilders as well as beginners. It brings out the best in the workouts and also boosts their confidence to achieve peak performance`;
+        details.setAttribute('class', "m-0 mb-2");
+
+        let priceNew = document.createElement("span");
+        priceNew.innerText = "₹" + Number(newprice).toFixed(2) + " ";
+        priceNew.setAttribute('class', "fs-3 fw-bold");
+
+        let priceOld = document.createElement("span");
+        priceOld.innerText = "₹" + Number(oldprice).toFixed(2) + " ";
+        priceOld.setAttribute('class', "text-muted text-decoration-line-through");
+
+        let priceOff = document.createElement("span");
+        priceOff.innerText = " " + off;
+        priceOff.setAttribute('class', "fw-bold priceColor");
+
+        let totalPrice = document.createElement("div");
+        totalPrice.append(priceNew, priceOld, priceOff)
+
+        productCompany.append(company);
+        productImage.append(image);
+        productName.append(heading);
+        detailsDiv.append(details);
+        productPrice.append(totalPrice)
+        imgBox1.append(img1);
+        imgBox2.append(img2);
+        imgBox3.append(img3);
+    }
+    displayProducts(product);
+
+
+    //Display Image
+    function displayImage(name) {
+        let content = name;
+        productImage.innerHTML = null;
+        productImage.innerHTML = content;
+    }
+
+
+    // Add to Cart
+    if (localStorage.getItem('addToCart') === null) {
+        localStorage.setItem('addToCart', JSON.stringify([]))
+    }
+
+    function addProductsToCart() {
+
+        let cart = JSON.parse(localStorage.getItem('addToCart'));
+
+        // Checking Duplicate products
+        let flag = false;
+        cart.forEach((element) => {
+            if (element.name == product.name) {
+                flag = true;
+            }
+        });
+
+        if (flag == true) {
+            alert(`Product is already added`);
+        } else if (flag == false) {
+            cart.push(product);
+            alert(`Product is added to the Cart`);
+        }
+
+        console.log(cart);
+
+        localStorage.setItem('addToCart', JSON.stringify(cart));
+    }
+
+    // --------------------Delivery availibiliy check----------------------
+
+    function pincodeCheck(){
+        let deliveryCheck = document.getElementById('deliveryCheck').value;
+
+        if(deliveryCheck.length != 6){
+            alert("Please enter a valid pincode");
+        }else if (deliveryCheck[0] == 1 || deliveryCheck[0] == 2 || deliveryCheck[0] == 3 || deliveryCheck[0] == 4) {
+            alert("Delivery is available in your Area");
+        } else {
+            alert("Delivery is not available in your Area");
+        }
+
+
+    }
+
+
+
+
+
+</script>

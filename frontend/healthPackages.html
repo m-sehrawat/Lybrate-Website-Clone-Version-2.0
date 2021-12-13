@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/healthpackages.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/topNavbar.css">
+    <title>Health Packages</title>
+    <link rel="icon" type="image/x-icon" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+
+
+</head>
+
+<body>
+
+    <div id="topHeaderDisplay"></div>
+
+    <!-- navigation for different tabs -->
+    <div id="navbarComponents" class="container upperBox mt-4"></div>
+
+    <p class="fs-4 text-center my-4">Health Packages</p>
+
+    <!-- Display Health Packages -->
+    <div id="displayPackages" class="container"></div>
+
+    <div class="mt-5" id="footerDisplay"></div>
+
+</body>
+
+</html>
+
+<script type="module">
+    // --------------------Calling HTML elements------------------------
+    let navbarComponents = document.getElementById('navbarComponents');
+    let topHeaderDisplay = document.getElementById('topHeaderDisplay');
+    let footerDisplay = document.getElementById('footerDisplay');
+
+
+    // --------------------Importing HTML Contents------------------------
+    import topHeader from './JS/topHeader.js'
+    import footer from './JS/footer.js';
+    import { bottomNavbar } from './JS/feedPage.js'
+
+    // Display Top Navbar
+    topHeader().then((response) => {
+        topHeaderDisplay.innerHTML = response;
+    })
+
+    // Display bottom navbar
+    bottomNavbar().then((response) => {
+        navbarComponents.innerHTML = response;
+    })
+
+     // Display Footer
+     footer().then((response) => {
+        footerDisplay.innerHTML = response;
+    })
+</script>
+
+
+
+<script>
+
+    let displayPackages = document.getElementById('displayPackages');
+
+    // --------------------Fetching data from own server------------------------
+    async function fetchData() {
+
+        let response = await fetch(`http://localhost:2000/api/feedData`);
+
+        let data = await response.json();
+
+        data = data.healthPackages
+
+        appendData(data);
+    }
+    // Calling Fetch Function
+    fetchData()
+
+
+    // --------------------Appending Data into the Div------------------------
+    function appendData(data) {
+
+        data.forEach((element) => {
+
+            let { heading, img, price, doctor, experience } = element;
+
+            let div = document.createElement('div');
+            div.setAttribute('class', 'border showShadow');
+            div.style = "background-color:white";
+
+            let image = document.createElement('img');
+            image.src = img;
+            image.setAttribute('class', 'img-fluid');
+
+            let head = document.createElement('h6');
+            head.textContent = heading;
+            head.setAttribute('class', 'fw-bolder m-2');
+
+            let priceDetails = document.createElement('p');
+            priceDetails.textContent = "Package Price : " + price;
+            priceDetails.setAttribute('class', 'm-2');
+
+            let doctorDetails = document.createElement('p');
+            doctorDetails.textContent = doctor;
+            doctorDetails.setAttribute('class', 'm-2 fw-bold');
+
+            let expDetails = document.createElement('p');
+            expDetails.textContent = experience;
+            expDetails.setAttribute('class', 'text-muted mx-2 mt-0 mb-3');
+
+            div.append(image, head, priceDetails, doctorDetails, expDetails);
+
+            displayPackages.append(div);
+        });
+    }
+
+
+    // ------------Navbar Functions----------------------
+    function displayNews(name) {
+        localStorage.setItem('newsTopic', name);
+        window.location.href = "aboutPage.html";
+    }
+
+    function bookAppointment(name) {
+        localStorage.setItem('newsTopic', name);
+        window.location.href = "findDoctors.html";
+    }
+
+
+</script>

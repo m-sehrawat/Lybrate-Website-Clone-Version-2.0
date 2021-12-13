@@ -1,0 +1,81 @@
+* {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.upperBox {
+    max-width: 1200px;
+    min-height: 60px;
+}
+
+.hoverEffect {
+    background-color: #f7f7f7;
+    color: #535151;
+}
+
+.hoverEffect:hover {
+    background-color: white;
+    color: black;
+}
+
+.icon-width {
+    width: 70%;
+    margin-top: 10px;
+}
+
+.btn-color {
+    background-color: #f6f7f9;
+}
+
+.btn-color:hover {
+    background-color: #eeeeee;
+}
+
+
+
+
+/* Header Css start*/
+
+.topnavbar {
+font-size: 14px;
+background-color: #eee;
+padding: 3px 0;
+font-weight: inherit;
+font-family: inherit;
+color: rgb(105, 93, 93);
+margin-left: 55%;
+}
+
+#topnavbar {
+background-color: #eee;
+}
+
+#navbar > a {
+text-decoration: none;
+color: black;
+font-size: 15px;
+margin: auto 1%;        
+}
+
+#navbar > :nth-child(1){
+margin-left: 2%;
+margin-right: 15%;
+margin-top: 20px;
+}
+
+#navbar >a> button {
+background-color: red;
+border: 1px solid red;
+border-radius: 20px;
+width: 8%;
+height: 35px;
+font-size: 20px;
+color: white;
+margin-top: 0px;
+}
+
+
+/* Header CSS ends*/

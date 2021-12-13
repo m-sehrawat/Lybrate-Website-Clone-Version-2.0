@@ -1,0 +1,309 @@
+ 
+      * {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        background-color: #eeeeee;
+    }
+
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 14px;
+        /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+    }
+
+
+
+
+
+    #topnav {
+        max-width: 100%;
+        display: flex;
+        gap: 3%;
+        padding: 1% 4% 0 4%;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    #search {
+        width: 45%;
+        justify-content: center;
+    }
+
+
+    #searchBox {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(222, 222, 222);
+        border: none;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    #search li {
+        display: none;
+        border: 1px solid rgb(235, 229, 229);
+        background-color: white;
+        height: 40px;
+        float: left;
+        list-style: none;
+        color: black;
+        position: relative;
+        left: -50px;
+        justify-content: center;
+    }
+
+    #lebrateCash> {
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #Categories>li {
+        max-width: 100%;
+        list-style: none;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+
+
+    }
+
+    #Categories {
+        max-width: 100%;
+        background-color: black;
+        color: white;
+        justify-content: center;
+
+
+    }
+
+    .listitems {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5px;
+        white-space: nowrap;
+        margin-left: 0%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    a {
+
+        text-decoration: none;
+    }
+
+    .listitems>li {
+        display: none;
+        border: 1px solid rgb(235, 229, 229);
+        background-color: white;
+        height: 40px;
+        float: left;
+        list-style: none;
+        color: black;
+        position: relative;
+        left: -50px;
+        justify-content: center;
+        padding: 2px 16px;
+
+    }
+
+    #Categories>ul {
+        max-width: 100%;
+        display: flex;
+        width: 100%;
+        margin-top: 0px;
+        list-style: none;
+        gap: 30px;
+        height: 32px;
+        padding-top: 2px;
+        text-align: left;
+        position: relative;
+    }
+
+    #Categories li:hover .listitems>li {
+        display: block;
+        text-decoration: black;
+        color: black;
+
+    }
+    
+    #logo img {
+        max-width: 80%
+    }
+
+    #offersDiv {
+        width: 47%;
+        background-color: rgb(232, 201, 190);
+        justify-content: center;
+        margin-left:2%;
+    }
+
+    #offersDiv>div {
+        margin: 1% 2% 2% 2%;
+        display: flex;
+        width: 96%;
+    }
+
+    #offersDiv>div>div {
+        width: 49.5%;
+        border: 1px dashed white;
+        text-align: center;
+        justify-content: center;
+        background-color: white;
+        padding: 25% 5% 25% 5%;
+    }
+
+    #offersDiv>div>div img {
+        width: 90%;
+    }
+
+    #offersDiv>div>div:nth-child(2) {
+        margin-left: 1px;
+    }
+
+    .products {
+        max-width: 100%;
+        justify-content: center;
+        margin: 2% 5% 0 5%;
+        display: flex;
+
+    }
+
+    .productsGrid2x2 {
+        width: 45%;
+        margin-left: 2%;
+        background-color: white;
+        padding: 1%;
+    }
+
+    .productsGrid2x2>div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 49% 49%;
+
+    }
+
+    .productsGrid2x2>div>div {
+        border: 2px solid rgb(238, 238, 238);
+        padding: 4%;
+
+    }
+
+    .productsGrid2x2>div>div img {
+        width: 80%;
+    }
+
+    #allData {
+      width: 100%;
+        background-color: rgb(238, 238, 238);
+        text-align: center;
+      
+       
+    }
+
+    /*----------////----css start--------slideshow top----------------------////------------------------*/
+    #slideShow{
+        width:84.9%;
+        margin-left:8.5%;
+    }
+    #slideShow>img {
+
+        width: 100%;
+        height: 250px;
+
+    }
+
+    /*------------/////--css start-------------bottom part written information-----------//////----------------*/
+    #informationParagrahBottom {
+        text-align: left;
+        padding-left: 7.5%;
+        padding-right: 7%;
+        font-size: small;
+
+    }
+
+    /*---------------------------go back to home ---------------------------------------*/
+    #informationParagrahBottom #textRed {
+        color: rgb(212, 5, 5) !important;
+        font-weight: lighter;
+    }
+
+    .backToHomePage {
+        color: black !important;
+   }
+   /*-----------------------information headings and paragraph--------------------------*/
+   #informationParagrahBottom > h4,h5,h3{
+       color: grey;
+   }
+   #informationParagrahBottom > p{
+       color: rgb(170, 169, 169);
+   }
+   /*------------------last paragraph detailed font size and color----------------------------*/
+   .boldFont{
+       color: rgb(156, 156, 156);
+       
+   }
+   .smallFont{
+       font-size: smaller;
+   }
+   /*--------//////////////--- end of css of information bottom of the page------/////////////////--------*/
+
+   /*--------------///////////---------------shop now banner css start----------//////-------------------*/
+   .shopnowBanner{
+       width: 88%;
+       display: flex;
+       gap: 1%;
+       margin-left: 7%;    }
+   .shopnowBanner > img{
+       width: 30%;
+       margin-left:2%;
+      
+   }
+   #bggray{
+       background-color: rgb(238, 238, 238);
+   }
+   #search_div{
+       width:41.5%;
+       display:none;
+       position:absolute;
+       background-color: white;
+      z-index: 5;
+      margin-left:20.8%;
+      padding-left:5px;
+      padding:2px;
+     
+   }
+   #search_div>p:hover{
+       background-color: #c62828;
+       color:white;
+    
+       padding:10px;
+   }
+
+
+    /*--------------///////////---------------shop now banner css end----------//////-------------------*/

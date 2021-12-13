@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/smallHeader.css">
+    <title>Payment Page</title>
+
+    <style>
+        * {
+            font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #eeeeee;
+        }
+
+        /* div {
+            border: 1px solid red;
+            min-height: 50px;
+        } */
+
+        #mainBox {
+            max-width: 1200px;
+        }
+
+        .bg-white {
+            background-color: white;
+
+        }
+
+        #orderDone {
+            width: 800px;
+            margin: auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="headerDisplay"></div>
+
+
+
+    <div id="mainBox" class="container my-4"></div>
+
+    <div id="footerDisplay"></div>
+</body>
+
+</html>
+
+<script type="module">
+    // --------------Header Imported-------------------------
+    let headerDisplay = document.getElementById('headerDisplay');
+    import showHeader from './JS/smallHeader.js';
+    showHeader().then((response) => {
+        headerDisplay.innerHTML = response;
+    })
+
+    // --------------Footer Imported-------------------------
+    let footerDisplay = document.getElementById('footerDisplay');
+    import footer from './JS/footer.js';
+    footer().then((response) => {
+        footerDisplay.innerHTML = response;
+    })
+
+
+    // --------------Cart Page Data Imported------------------
+    let mainBox = document.getElementById('mainBox');
+
+    import { cartPageHTML, orderSummary } from './JS/cartPageData.js';
+
+    cartPageHTML().then((response) => {
+
+        mainBox.innerHTML = response;
+
+
+        // ------------Getting userData from Local storage---------------
+        let userData = JSON.parse(localStorage.getItem("priceDetails"))
+        console.log('userData:', userData)
+
+        let { sumMRP, sumDiscount, count, sumCartTotal } = userData;
+
+        // -----------------Display Total Price---------------------
+        orderSummary(sumMRP, sumDiscount, count, sumCartTotal);
+
+
+
+        // ----------------Sending Data to Local Storage------------------------------
+        let proceedBtn = document.getElementById('proceedBtn');
+        proceedBtn.textContent = "Proceed";
+        proceedBtn.onclick = () => {
+            orderDone();
+        }
+
+        // ---------------Button redirect to Cart Page-----------------------------------     
+        let addMoreBtn = document.getElementById('addMoreBtn');
+        addMoreBtn.textContent = "View Address Details";
+        addMoreBtn.style = "display:none"
+
+
+        // ---------------------Display Box--------------------------------
+        let productBox = document.getElementById('productBox');
+        // productBox.style = "border: 1px solid red; min-height: 200px";
+
+        productBox.innerHTML = `<div class="container border p-0">
+        <div class="bg-danger">
+            <p class="fs-5 px-3 py-2 text-white">PAYMENTS OPTIONS</p>
+        </div>
+        <div class="form-check mt-4 ms-3">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">DebitCard/CreditCard/Net Banking/UPI</label>
+        </div>
+        <div class="form-check mt-4 ms-3">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">PayTM Wallet</label>
+        </div>
+        <div class="form-check mt-4 ms-3">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+            <label class="form-check-label" for="exampleRadios3">PhonePe</label>
+        </div>
+        <div class="form-check mt-4 ms-3">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+            <label class="form-check-label" for="exampleRadios4">Airtel Money</label>
+        </div>
+        <div class="form-check my-4 ms-3">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked>
+            <label class="form-check-label" for="exampleRadios5">Cash On Delivery (COD)</label>
+        </div>
+    </div>`
+
+
+        function orderDone() {
+
+            setTimeout(() => {
+                alert("Your order is confirmed");
+
+                setTimeout(() => {
+                    document.body.style = "background-color:white";
+                    document.body.innerHTML = `<div id="orderDone"><img class="img-fluid" src="https://www.legalraasta.com/wp-content/uploads/2017/06/legalraasta.gif"></div>`
+
+                    setTimeout(() => {
+                        window.location.href = "landingpage.html"
+                    }, 4000)
+                }, 1000)
+            }, 1000);
+        }
+
+
+
+
+    })
+
+
+
+</script>

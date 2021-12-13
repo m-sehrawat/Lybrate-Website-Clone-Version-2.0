@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <title>shop by cateogary</title>
+    <link rel="icon" type="image/x-icon" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+    <style>
+        * {
+            font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: #eee;
+            overflow-x: hidden;
+        }
+
+        #footerDisplay {
+            margin-top: 30px;
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 14px;
+            /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+        #topnav {
+            max-width: 100%;
+            display: flex;
+            gap: 3%;
+            padding: 1% 4% 0 4%;
+            font-size: 14px;
+            justify-content: center;
+        }
+
+        #search {
+            width: 45%;
+            justify-content: center;
+        }
+
+
+        #searchBox {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(222, 222, 222);
+            border: none;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        #search li {
+            display: none;
+            border: 1px solid rgb(235, 229, 229);
+            background-color: white;
+            height: 40px;
+            float: left;
+            list-style: none;
+            color: black;
+            position: relative;
+            left: -50px;
+            justify-content: center;
+        }
+
+        #searchBox:ho #btn {
+            height: 30px;
+            background-color: white;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            justify-content: center;
+        }
+
+        #lebrateCash> {
+            width: 35%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #Categories>li {
+            max-width: 100%;
+            list-style: none;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        #Categories {
+            max-width: 100%;
+            background-color: black;
+            color: white;
+            justify-content: center;
+        }
+
+        .listitems {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 5px;
+            white-space: nowrap;
+            margin-left: 0%;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .listitems>li {
+            display: none;
+            border: 1px solid rgb(235, 229, 229);
+            background-color: white;
+            height: 40px;
+            float: left;
+            list-style: none;
+            color: black;
+            position: relative;
+            left: -50px;
+            justify-content: center;
+            padding: 2px 16px;
+        }
+
+        #Categories>ul {
+            max-width: 100%;
+            display: flex;
+            width: 100%;
+            margin-top: 0px;
+            list-style: none;
+            gap: 30px;
+            height: 32px;
+            padding-top: 2px;
+            text-align: left;
+            position: relative;
+        }
+
+        #Categories li:hover .listitems>li {
+            display: block;
+            text-decoration: black;
+            color: black;
+        }
+
+        #logo img {
+            max-width: 80%
+        }
+
+        #slideShow {
+            width: 90.5%;
+            margin-left: 4.5%;
+        }
+
+        #slideShow>img {
+            width: 100%;
+            height: 250px;
+        }
+
+        /*-------------------------filter and product section start-------------------------------------*/
+        #filterGrid {
+            width: 99%;
+            display: flex;
+            gap: 2%;
+            margin-left: 4.3%;
+            margin-right: 2%;
+            font-size: small;
+        }
+
+        .leftFilter {
+            width: 16%;
+            height: 300px;
+            padding-left: 1%;
+            background-color: white;
+        }
+
+
+        .rightProducts {
+            width: 72%;
+            height: 800px;
+            overflow: scroll;
+            padding-left: 1%;
+            background-color: white;
+            overflow-x: hidden;
+        }
+
+        .flex {
+            display: flex;
+            gap: 3%;
+        }
+
+        .red {
+            color: rgb(190, 9, 9);
+            font-weight: normal;
+        }
+
+        .colorChange {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .colorChange:hover {
+            color: rgb(190, 9, 9);
+            text-decoration: none;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        /*-----------------------products grid right side-----------------------------------------------------------*/
+        #grid {
+            display: grid;
+            grid-template-columns: 47% 47%;
+            margin-top: 110px;
+            column-gap: 3%;
+            row-gap: 0.7%;
+            margin-left: none;
+        }
+
+        #grid>div {
+            border-radius: 10px;
+            height: 150px;
+            box-shadow: 2px 2px 2px 2px #EEEEEE;
+            padding-bottom: 15%;
+            display: flex;
+            width: 100%;
+        }
+
+        #grid>div div {
+            width: 60%;
+            padding-left: 10px;
+        }
+
+        #grid>div img {
+            width: 30%;
+        }
+
+        #grid>div span:nth-child(2) {
+            text-decoration-line: line-through;
+            color: rgb(58, 57, 57);
+            font-weight: normal;
+            margin-right: 5px;
+        }
+
+        #grid>div span:nth-child(1) {
+            font-size: larger;
+            color: red;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        #grid>div span:nth-child(3) {
+            color: green;
+            font-weight: 600;
+        }
+
+        .rightProducts>div:nth-child(1) {
+            position: absolute;
+            width: 62%;
+            padding: 0px 0px 5px 5px;
+            z-index: auto;
+            background-color: white;
+            box-shadow: 0px 10px 10px 0px #EEEEEE;
+        }
+
+        #grid>div button {
+            background-color: red;
+            border-radius: 10px;
+            width: 90px;
+            color: white;
+            height: 30px;
+            border: none;
+            margin-left: 70%;
+            padding: 4px;
+        }
+
+        .radioBtnMargin {
+            margin: 16px 0px;
+            font-size: 15px;
+        }
+
+        .applyBtn {
+            border-radius: 0px;
+            border: none;
+            color: white;
+            background-color: black;
+            padding: 4px 10px;
+            margin: 5px;
+        }
+
+        .applyBtn:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="alignall">
+        <div id="container">
+            <div id="topnav">
+                <div id="logo"><a href="landingpage.html"><img src="https://www.lybrate.com/img/Lybrate-Goodkart-Logo.png" /></a></div>
+                <div id="search">
+                    <input type="text" id="searchBox" oninput="debounce(main,1000)" placeholder="Search for Health Products" />
+
+                </div>
+
+                <div><a style="color: black;" href="signup.html">login/signup</a></div>
+                <span title="This feature coming soon" style="cursor: pointer;">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto,h_15,w_15/imgs/product/d2d/PatientGoldMembership/lybrate_icon_red_large.png" />
+                    LybrateCash
+                </span>
+                <a href="landingpage.html"><button id="btn">Home</button></a>
+                <a href="cart.html"><span style="color: black; font-size: 40px;" class="material-icons">shopping_cart</span></a>
+
+            </div>
+            <div id="search_div"></div>
+
+            <div id="allData">
+                <nav id="Categories">
+                    <ul>
+                        <li>Shop By Category<span class="material-icons">expand_more</span>
+                            <ul class="listitems">
+                                <li>Sexual Wellness<span class="material-icons">chevron_right</span></li>
+                                <li>Food & Drink<span class="material-icons">chevron_right</span></li>
+                                <li>Vitamin & supplement<span class="material-icons">chevron_right</span></li>
+                                <li>Weight Management<span class="material-icons">chevron_right</span></li>
+                                <li>Child Care<span class="material-icons">chevron_right</span></li>
+                                <li>Protine & Fitness<span class="material-icons">chevron_right</span></li>
+                                <li>Skin & Health Care<span class="material-icons">chevron_right</span></li>
+                                <li>Personal Care<span class="material-icons">chevron_right</span></li>
+                            </ul>
+                        </li>
+
+                        <li>Redeem LybrateCash</li>
+
+                        <li>Sexual Wellness<span class="material-icons">expand_more</span>
+                            <ul class="listitems">
+                                <li>Women Sexual Wellness</li>
+                                <li>Men Performance Enhancers</li>
+
+                            </ul>
+                        </li>
+
+                        <li>Food & Drink<span class="material-icons">expand_more</span>
+                            <ul class="listitems">
+                                <li>Healthy BreakFast</li>
+                                <li>Jams ,Honey and Spreads</li>
+                                <li>Ready to Eat</li>
+                                <li>Healthy Drinks</li>
+                                <li>Oils and Ghees</li>
+                                <li>Snack Food</li>
+                                <li>Tea and Coffee</li>
+                            </ul>
+                        </li>
+
+                        <li>Vitamin & supplement<span class="material-icons">expand_more</span>
+                            <ul class="listitems">
+                                <li>Liver Care</li>
+                                <li>Multivitamin</li>
+                                <li>Gut Care</li>
+                                <li>Bone & Joint Care</li>
+                                <li>Eye Care</li>
+                                <li>Brain Care</li>
+                                <li>Hair & Care</li>
+                                <li>Lung Care</li>
+                                <li>Menstural Health</li>
+                            </ul>
+                        </li>
+
+                        <li>Weight Management<span class="material-icons">expand_more</span>
+                            <ul class="listitems">
+                                <li>Drinks for Weight Loss</li>
+                                <li>Fat Burner </li>
+                                <li>Meal Replacement</li>
+                            </ul>
+                        </li>
+
+                        <li>Child Care<span class="material-icons">expand_more</span>
+                            <ul class="listitems">
+                                <li>Child Skin products </li>
+                                <li>Child Hair Shampoo</li>
+                                <li>Child Immunity</li>
+                                <li>Child Snack Food</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <!-----------///---------slideshow-------------------////---------------->
+            <div id="slideShow"></div>
+            <!-----------//-----------slideshow ends---------------///----------------------------->
+            <br>
+        </div>
+        <div id="filterGrid">
+            <div class="leftFilter">
+                <div class="radioBtnMargin">
+                    <h3>Filters</h3>
+                    <hr>
+                    <h3>Price</h3>
+                    <div class="radioBtnMargin">
+                        <input type="radio" name="exampleRadios" id="exampleRadios1" value="200">
+                        <label for="exampleRadios1">₹ 200</label>
+                    </div>
+                    <div class="radioBtnMargin">
+                        <input type="radio" name="exampleRadios" id="exampleRadios2" value="500">
+                        <label for="exampleRadios2">₹ 200 to ₹ 500</label>
+                    </div>
+                    <div class="radioBtnMargin">
+                        <input type="radio" name="exampleRadios" id="exampleRadios3" value="1000">
+                        <label for="exampleRadios3">₹ 500 to ₹ 1000</label>
+                    </div>
+                    <div class="radioBtnMargin">
+                        <input type="radio" name="exampleRadios" id="exampleRadios4" value="1001">
+                        <label for="exampleRadios4">Above ₹ 1000</label>
+                    </div>
+                    <div>
+                        <button class="applyBtn">Apply</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rightProducts">
+                <div id="fixed" style="width: 1030px">
+                    <p><a href="landingpage.html"><strong class="red">home</strong></a> > <a href="goodkart.html"><strong class="red"> GoodKart</strong></a> > Vitamin & Supplement</p>
+                    <h2>Vitamin & Supplement</h2>
+                    <div class="flex">
+                        <div class="colorChange">Sort by</div>
+                        <div onclick="sort1()" class="colorChange" style="cursor: pointer;">Price - Low to High</div>
+                        <div onclick="sort2()" class="colorChange" style="cursor: pointer;">Price - High to Low</div>
+                    </div>
+
+                </div>
+                <!-----------------right side product divs------------------------------->
+                <div id="grid">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="footerDisplay"></div>
+</body>
+
+</html>
+
+<script type="module">
+    // --------------Footer Imported-------------------------
+    let footerDisplay = document.getElementById('footerDisplay');
+    import footer from './JS/footer.js';
+    footer().then((response) => {
+        footerDisplay.innerHTML = response;
+    })
+</script>
+
+
+<script>
+    /*-------------//////---------------slide show-------------------------/////-----------------*/
+
+
+    function startSlideshow() {
+
+        let images = ["./GoodKartImages/slide1.png", "./GoodKartImages/slide2.png", "./GoodKartImages/slide3.png", "./GoodKartImages/slide4.png", "./GoodKartImages/slide5.png", "./GoodKartImages/slide6.png", "./GoodKartImages/slide7.png", "./GoodKartImages/slide8.png", "./GoodKartImages/slide9.png", "./GoodKartImages/slide10.png", "./GoodKartImages/slide11.png", "./GoodKartImages/slide12.png", "./GoodKartImages/slide13.png", "./GoodKartImages/slide14.png", "./GoodKartImages/slide15.png"];
+        let containers = document.getElementById("slideShow");
+        let img = document.createElement("img");
+        img.src = images[9];
+        containers.append(img);
+
+        let counter = 0;
+
+        setInterval(() => {
+
+            containers.innerHTML = null;
+
+            if (counter == images.length) {
+                counter = 0;
+            }
+
+            img.src = images[counter];
+            containers.append(img);
+            counter++;
+
+        }, 2000)
+    }
+    startSlideshow();
+
+    /*----------/////////////////--------end slideshow--------------/////////////////////--------------------*/
+
+
+
+    var data;
+    async function getallproducts() {
+
+        let res = await fetch(`http://localhost:2000/api/Searchproducts`);
+        data = await res.json();
+
+        appendData(data);
+
+
+    }
+    getallproducts();
+    let data_div = document.getElementById("grid");
+
+    function appendData(data) {
+        data_div.innerHTML = null;
+        data.forEach((el) => {
+
+            let div = document.createElement("div");
+
+            let div1 = document.createElement("div");
+            let image = document.createElement("img");
+            image.src = el.img[0];
+            image.onclick = () => {
+                localStorage.setItem("Single_products", JSON.stringify(el));
+                window.location.href = "Product Description.html"
+            }
+            let h4 = document.createElement("h4");
+            h4.innerText = el.name;
+            h4.onclick = () => {
+                localStorage.setItem("Single_products", JSON.stringify(el));
+                window.location.href = "Product Description.html"
+            }
+
+            let p1 = document.createElement("p");
+            p1.innerText = el.name + " " + "is a natural herbal supplement that promotes deep relaxation, helping you beat stress";
+
+            let p = document.createElement("p");
+            let span1 = document.createElement("span");
+            span1.innerHTML = "₹" + el.newprice;
+            let span2 = document.createElement("span");
+            span2.innerHTML = "₹" + el.oldprice;
+            let span3 = document.createElement("span");
+            span3.innerHTML = el.off;
+            p.append(span1, span2, span3);
+
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add to Cart"
+            btn.onclick = function () {
+                addProductsToCart(el);
+                btn.innerText = "Go to Cart"
+                btn.style.backgroundColor = "green"
+                btn.addEventListener("click", function () {
+                    window.location.href = "cart.html"
+                });
+
+            }
+            div1.append(h4, p1, p, btn);
+            div.append(image, div1);
+            data_div.append(div);
+
+        })
+
+    }
+    function sort1() {
+        sortLtoH(data);
+    }
+    function sort2() {
+        sortHtoL(data)
+    }
+    function sortLtoH(data) {
+        data.sort((a, b) => {
+            return a.newprice - b.newprice;
+        });
+        appendData(data)
+    }
+
+    function sortHtoL(data) {
+
+        data.sort((a, b) => {
+            return b.newprice - a.newprice;
+        });
+        appendData(data);
+    }
+
+
+    if (localStorage.getItem('addToCart') === null) {
+        localStorage.setItem('addToCart', JSON.stringify([]))
+    }
+
+    function addProductsToCart(el) {
+
+        let cart = JSON.parse(localStorage.getItem('addToCart'));
+
+
+        let flag = false;
+        cart.forEach((product) => {
+            if (product.name == el.name) {
+                flag = true;
+            }
+        });
+
+        if (flag == true) {
+
+        } else if (flag == false) {
+            cart.push(el);
+            alert(`Product is added to the Cart`);
+        }
+
+        console.log(cart);
+
+        localStorage.setItem('addToCart', JSON.stringify(cart));
+    }
+
+
+
+</script>

@@ -1,0 +1,259 @@
+.navbarGoodKart{
+    width: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+#container {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#topnav {
+    max-width: 100%;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    gap: 3%;
+    padding: 1% 4% 0 4%;
+    font-size: 14px;
+    justify-content: center;
+}
+
+#search {
+    width: 45%;
+    justify-content: center;
+}
+
+
+#searchBox {
+    width: 85%;
+    padding: 8px;
+    background-color: rgb(222, 222, 222);
+    border: none;
+    margin-left: 10%;
+    justify-content: center;
+}
+#search li{
+    display: none;
+    border: 1px solid rgb(235, 229, 229);
+    background-color: white;
+    height: 40px;
+    float: left;
+    list-style: none;
+    color: black;
+    position: relative;
+    left: -50px;
+    justify-content: center;
+}
+#searchBox:ho
+
+#btn {
+    height: 30px;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+#lebrateCash> {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#Categories>li {
+    max-width: 100%;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+
+}
+
+#Categories {
+    max-width: 100%;
+    background-color: black;
+    color: white;
+    justify-content: center;
+
+
+}
+
+.listitems {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    white-space: nowrap;
+    margin-left: 0%;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+.listitems>li {
+    display: none;
+    border: 1px solid rgb(235, 229, 229);
+    background-color: white;
+    height: 40px;
+    float: left;
+    list-style: none;
+    color: black;
+    position: relative;
+    left: -50px;
+    justify-content: center;
+
+}
+
+#Categories>ul {
+    max-width: 100%;
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    list-style: none;
+    gap: 30px;
+    height: 32px;
+    padding-top: 2px;
+    text-align: left;
+
+    position: relative;
+
+
+}
+
+#Categories li:hover .listitems>li {
+    display: block;
+    text-decoration: black;
+    color: black;
+
+}
+
+#logo img {
+    max-width: 80%
+}
+
+#allData {
+    width: 80%;
+    margin:auto;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+}
+div{
+    border: 1px solid red;
+}
+.ExclusiveForGold{
+    width: 49%;
+    margin: auto;
+    background: inherit;
+    display: inline-block;
+}
+.Exclu{
+    width: 50%;
+    display:inline-flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.VieweAll{
+    width: 48%;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.organicHerbal{
+    width:49%;
+    height: 450px;
+    margin: auto;
+}
+.goldMembardeal{
+    width:49%;
+    height: 222px;
+    margin: auto;
+}
+.secondBox{
+    width: 100%;
+
+}
+.ThirdBox{
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+
+}#Excl{
+    width: 100%;
+    margin-bottom: 20px;
+}
+/*----------////----css start--------slideshow top----------------------////------------------------*/
+#slideShow > img{
+    
+        width: 100%;
+        height: 280px;
+    
+}
+/*------------/////--css start-------------bottom part written information-----------//////----------------*/
+#informationParagrahBottom{
+ text-align: left;
+ padding-left: 3%;
+ padding-right: 3%;
+ font-size: small;
+ 
+}
+/*---------------------------go back to home ---------------------------------------*/
+#informationParagrahBottom #textRed{
+   color: rgb(212, 5, 5) !important;
+   font-weight: lighter;
+}
+.backToHomePage {
+    color: black !important;
+}
+#informationParagrahBottom > h4,h5,h3{
+   color: grey;
+}
+#informationParagrahBottom > p{
+   color: rgb(170, 169, 169);
+}
+
+.boldFont{
+   color: rgb(156, 156, 156);
+   
+}
+.smallFont{
+   font-size: smaller;
+}
+a{
+    list-style: none;
+    list-style-type: none;
+}

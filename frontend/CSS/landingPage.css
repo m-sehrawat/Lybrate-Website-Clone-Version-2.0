@@ -1,0 +1,199 @@
+* {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+    padding: 0px;
+}
+.cardBoxSize {
+    max-width: 1300px;
+}
+
+ #bckimg {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/Web_Home-Page_Banner_03.jpg");
+    background-size: cover;
+    background-position: center -60px;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 48px 0;
+    }
+     
+ #bckimg > h2 {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 35px;
+    color: white;
+    }
+
+ #bckimg > input {
+    width: 55%;
+    height: 38px;
+    margin-top: 50px;
+    margin-left: 16%;
+    }
+
+ #bckimg > button {
+    width: 13%;
+    height: 40px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    }
+
+ #bckimg > button:hover {
+    background-color: rgb(219, 137, 137);
+    }
+
+ .trending {
+    color: white;
+    margin-top: 55px;
+    }
+
+ .trending > div {
+   
+    margin-top: 35px;
+    }
+
+ .block {
+    background-color: rgb(54, 54, 54);
+    color: white;
+    text-align: center;
+    padding: 7px 0px;
+}
+
+ .b {
+    padding: 20px 50px;
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 200%;
+    font-size: large;
+    }
+
+button {
+    border: 2px solid white;
+    padding: 10px 10px;
+    background-color: #ee0606;
+    color: white;
+    }
+
+.lybrate-section {
+    padding-top: 52px;
+    text-align: left;
+    background: #eee;
+    color: #676767
+    }
+#diet {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/dietitian-nutritionist.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#gyan {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/gynaecologist.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#psy {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/psychologist.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#derm {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/dermatologist.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+
+#delhi {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/cities/delhi_city.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#bang {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/cities/bangalore_city.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#mumb {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/cities/mumbai_city.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#kolk {
+    background-image: url("https://assets.lybrate.com/q_auto,f_auto/code/img/cities/kolkata_city.jpg");
+    background-size: cover;
+    width: 25%;
+    height: 150px;
+    margin: 5px 1%
+}
+#topcat, #topci {
+    background-color: #eee;
+}
+
+.about-section {
+    padding: 50px 0px;
+    text-align: left;
+    background: #eee;
+}
+.cardd {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+button {
+    border: 2px solid white;
+    padding: 10px 10px;
+    background-color: #616060;
+    color: white;
+}
+.btn:hover {
+    color: red;
+
+}
+
+.dropdown-header {
+  color: black;
+}
+#search_news{
+    width:55%;
+    display:none;
+    position:absolute;
+    background-color: white;
+   margin-left:16%;
+   top:50%;
+
+}

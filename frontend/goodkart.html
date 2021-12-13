@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/goodkart.css">
+    <title>GoodKart page</title>
+    <link rel="icon" type="image/x-icon" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+
+</head>
+
+<body>
+    <div id="alignall">
+        <div id="container">
+            <div id="topnav">
+                <div id="logo"><a href="goodkart.html"><img src="https://www.lybrate.com/img/Lybrate-Goodkart-Logo.png" /></a></div>
+                <div id="search">
+                    <input type="text" id="searchBox" oninput="debounce(main,1000)" placeholder="Search for Health Products" />
+                </div>
+
+                <div><a style="color: black;" href="signup.html">login/signup</a></div>
+                <span title="This feature coming soon" style="cursor: pointer;">
+                    <img  src="https://assets.lybrate.com/q_auto,f_auto,h_15,w_15/imgs/product/d2d/PatientGoldMembership/lybrate_icon_red_large.png" />
+                    LybrateCash
+                </span>
+                <a href="landingpage.html"><button class="btn btn-sm btn-outline-dark py-0">Home</button></a>
+                <a href="cart.html"><span style="color: black; font-size: 40px;" class="material-icons">shopping_cart</span></a>
+
+
+            </div>
+            <div id="search_div" style="cursor: pointer;">
+                <span>Hot Offers</span>
+            </div>
+
+            <div id="allData">
+                <a href="shopcatogery.html">
+                    <nav id="Categories">
+                        <ul>
+                            <li>Shop By Category<span class="material-icons">expand_more</span>
+                                <ul class="listitems">
+                                    <li>Sexual Wellness<span class="material-icons">chevron_right</span></li>
+                                    <li>Food & Drink<span class="material-icons">chevron_right</span></li>
+                                    <li>Vitamin & supplement<span class="material-icons">chevron_right</span></li>
+                                    <li>Weight Management<span class="material-icons">chevron_right</span></li>
+                                    <li>Child Care<span class="material-icons">chevron_right</span></li>
+                                    <li>Protine & Fitness<span class="material-icons">chevron_right</span></li>
+                                    <li>Skin & Health Care<span class="material-icons">chevron_right</span></li>
+                                    <li>Personal Care<span class="material-icons">chevron_right</span></li>
+                                </ul>
+                            </li>
+
+                            <li>Redeem LybrateCash</li>
+
+                            <li>Sexual Wellness<span class="material-icons">expand_more</span>
+                                <ul class="listitems">
+                                    <li>Women Sexual Wellness</li>
+                                    <li>Men Performance Enhancers</li>
+                                </ul>
+                            </li>
+
+                            <li>Food & Drink<span class="material-icons">expand_more</span>
+                                <ul class="listitems">
+                                    <li>Healthy BreakFast</li>
+                                    <li>Jams ,Honey and Spreads</li>
+                                    <li>Ready to Eat</li>
+                                    <li>Healthy Drinks</li>
+                                    <li>Oils and Ghees</li>
+                                    <li>Snack Food</li>
+                                    <li>Tea and Coffee</li>
+                                </ul>
+                            </li>
+
+                            <li>Vitamin & supplement<span class="material-icons">expand_more</span>
+                                <ul class="listitems">
+                                    <li>Liver Care</li>
+                                    <li>Multivitamin</li>
+                                    <li>Gut Care</li>
+                                    <li>Bone & Joint Care</li>
+                                    <li>Eye Care</li>
+                                    <li>Brain Care</li>
+                                    <li>Hair & Care</li>
+                                    <li>Lung Care</li>
+                                    <li>Menstural Health</li>
+                                </ul>
+                            </li>
+
+                            <li>Weight Management<span class="material-icons">expand_more</span>
+                                <ul class="listitems">
+                                    <li>Drinks for Weight Loss</li>
+                                    <li>Fat Burner </li>
+                                    <li>Meal Replacement</li>
+                                </ul>
+                            </li>
+
+                            <li>Child Care<span class="material-icons">expand_more</span>
+                                <ul class="listitems">
+                                    <li>Child Skin products </li>
+                                    <li>Child Hair Shampoo</li>
+                                    <li>Child Immunity</li>
+                                    <li>Child Snack Food</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </a>
+
+
+                <div id="slideShow">
+
+                </div>
+                <div class="products">
+
+                    <div class="fs-5" id="offersDiv">
+                        <p class="mt-2">Exclusively for <span style="font-weight: 600">gold</span> Members<span style="margin-left:45%">View
+                                All</span></p>
+                        <div>
+                            <div>
+                                <img src="https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/drvaidyas/dvmp/drvaidyas1/nirgundi1.jpg" />
+                                <p>Nirgundi Joint Guard</p>
+                                <p class="rs fw-bold text-danger">₹1 <span class="line text-muted text-decoration-line-through fw-normal">₹200</span></p>
+                                <p class="rs text-danger">Deal Ended</p>
+                            </div>
+                            <div>
+                                <img src="https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/healtherio/gingerpac2.jpg" />
+                                <p>Rich in anti oxidants</p>
+                                <p class="rs fw-bold text-danger">₹199 <span class="line text-muted text-decoration-line-through fw-normal">₹700</span></p>
+                                <p class="rs text-danger">Deal Ended</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">Best In Protein & Fitness - Your Workout Buddies</p>
+                        <div id="protine"></div>
+                    </div>
+                </div>
+
+                <!-------------/////-------shop now banner static-------------/////----------------------->
+                <br>
+                <div class="shopnowBanner">
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/product_banner_01.jpg" />
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner-COVID-19-Protection-Kit_01.jpg" />
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Fitness-Supplement-Products_02.jpg" />
+                </div>
+                <!------------/////------------shop now banner ending------------------////-------------------------------->
+
+                <div class="products">
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">New Arrival in Kart | Check Now</p>
+                        <div id="newArrival"></div>
+                    </div>
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">Money Saving Deals</p>
+                        <div id="moneySaving"></div>
+                    </div>
+                </div>
+
+                <!-------------/////-------shop now banner static-------------/////----------------------->
+                <br>
+                <div class="shopnowBanner">
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Sexual-Wellness-Products_03.jpg" />
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Multivitamin-Products_04.jpg" />
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Face-Care-Product_05.jpg" />
+                </div>
+                <!------------/////------------shop now banner ending------------------////----------------->
+
+
+                <div class="products">
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">Sexual Wellness Products - Feel The Pleasure</p>
+                        <div id="sexWell"></div>
+
+                    </div>
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">Immunity Boosting Products - Boost Immunity</p>
+                        <div id="immunity"></div>
+
+                    </div>
+                </div>
+
+                <!-------------//////-------shop now banner static-------------/////----------------------->
+                <br>
+                <div class="shopnowBanner">
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Baby-Care-Products.jpg" />
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Food-Drink-Products_07.jpg" />
+                    <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Hair-Care-Products_8.jpg" />
+                </div>
+                <!------------/////------------shop now banner ending------------------////-------------------->
+
+
+                <div class="products">
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">Best In Weight Management - Achieve Your Fitness Goals</p>
+                        <div id="weightManage"></div>
+                    </div>
+                    <div class="productsGrid2x2">
+                        <p class="fs-5" style="margin-top:2%">Best In Vitamins & Joint Care - Get Charged</p>
+                        <div id="vitamines"></div>
+                    </div>
+                </div>
+
+                <!---------///--------------bottom part written information-------------///-------------->
+                <br>
+                <div id="informationParagrahBottom">
+                    <!-------------------------------go back to home------------------------------->
+                    <p class="backToHomePage"><a href="landingpage.html"><strong id="textRed">Home </strong></a>> GoodKart</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="footerDisplay"></div>
+</body>
+
+</html>
+
+<script type="module">
+    // --------------Footer Imported-------------------------
+    let footerDisplay = document.getElementById('footerDisplay');
+    import footer from './JS/footer.js';
+    footer().then((response) => {
+        footerDisplay.innerHTML = response;
+    })
+</script>
+
+
+<script>
+
+    let parent1 = document.getElementById("protine")
+    let parent2 = document.getElementById("newArrival")
+    let parent3 = document.getElementById("moneySaving")
+    let parent4 = document.getElementById("sexWell")
+    let parent5 = document.getElementById("immunity")
+    let parent6 = document.getElementById("weightManage")
+    let parent7 = document.getElementById("vitamines")
+
+    async function getdata(url, parent) {
+        let res = await fetch(url);
+        let data = await res.json();
+        console.log(data);
+        showProducts(data, parent);
+    }
+    getdata("http://localhost:2000/api/bestinporfit", parent1);
+    getdata("http://localhost:2000/api/newArrival", parent2);
+    getdata("http://localhost:2000/api/moneySaving", parent3);
+    getdata("http://localhost:2000/api/sexwell", parent4);
+    getdata("http://localhost:2000/api/immunity", parent5);
+    getdata("http://localhost:2000/api/weightmanagement", parent6);
+    getdata("http://localhost:2000/api/vitamins", parent7);
+
+    var timerId;
+    let search = document.getElementById("searchproducts")
+    async function searchproduct() {
+        let res = await fetch(`http://localhost:2000/api/Searchproducts`);
+        let data = await res.json();
+        return data;
+    }
+
+    let search_div = document.getElementById("search_div");
+
+    function appendproduct(search_data) {
+        search_div.style.display = "block"
+        if (search_data === undefined) {
+            return false;
+        }
+
+        search_div.innerHTML = null;
+
+        search_data.forEach((el) => {
+            let p = document.createElement("p");
+            p.innerText = el.name;
+            p.onclick = () => {
+                localStorage.setItem("Single_products", JSON.stringify(el));
+                window.location.href = "Product Description.html"
+            }
+            search_div.append(p)
+        });
+    }
+
+    async function main() {
+        let name = document.getElementById("searchBox").value;
+        if (name.length < 3) {
+            return false;
+        }
+
+        let res = await searchproduct();
+
+        let product_data = res;
+        var search_data = [];
+        product_data.forEach((el) => {
+            if (el.name.includes(name)) {
+                console.log(el);
+                search_data.push(el);
+            }
+        });
+        appendproduct(search_data);
+    }
+
+    function debounce(func, delay) {
+
+        if (timerId) {
+            clearTimeout(timerId)
+        }
+
+        timerID = setTimeout(function () {
+            func();
+        }, delay);
+    }
+
+
+    function showProducts(data, parent) {
+
+        data.forEach((element) => {
+
+            let { img, name, newprice, oldprice, off } = element;
+
+            let div = document.createElement("div");
+            div.onclick = () => {
+                localStorage.setItem("Single_products", JSON.stringify(element));
+                window.location.href = "Product Description.html"
+            }
+
+            let image = document.createElement("img");
+            image.src = img[0];
+            image.setAttribute('class', 'img-fluid');
+
+            let heading = document.createElement("p");
+            heading.textContent = name;
+            heading.setAttribute('class', 'fw-bold')
+
+            let price = document.createElement("p");
+            let priceNew = document.createElement("span");
+            priceNew.textContent = "₹" + Number(newprice).toFixed(2) + " ";
+            priceNew.setAttribute('class', 'fw-bold text-danger')
+
+            let priceOld = document.createElement("span");
+            priceOld.textContent = "₹" + Number(oldprice).toFixed(2) + " ";
+            priceOld.setAttribute('class', 'text-muted text-decoration-line-through')
+
+            let discount = document.createElement("span");
+            discount.textContent = off;
+            discount.setAttribute('class', 'text-success')
+
+            price.append(priceNew, priceOld, discount)
+            div.append(image, heading, price);
+
+            parent.append(div)
+        });
+    }
+
+
+    /*-------------//////---------------slide show-------------------------/////-----------------*/
+
+
+
+    function startSlideshow() {
+
+        let images = ["./GoodKartImages/slide1.png", "./GoodKartImages/slide2.png", "./GoodKartImages/slide3.png", "./GoodKartImages/slide4.png", "./GoodKartImages/slide5.png", "./GoodKartImages/slide6.png", "./GoodKartImages/slide7.png", "./GoodKartImages/slide8.png", "./GoodKartImages/slide9.png", "./GoodKartImages/slide10.png", "./GoodKartImages/slide11.png", "./GoodKartImages/slide12.png", "./GoodKartImages/slide13.png", "./GoodKartImages/slide14.png", "./GoodKartImages/slide15.png"];
+        let containers = document.getElementById("slideShow");
+        let img = document.createElement("img");
+        img.src = images[9];
+        containers.append(img);
+
+        let counter = 0;
+
+        setInterval(() => {
+
+            containers.innerHTML = null;
+
+            if (counter == images.length) {
+                counter = 0;
+            }
+
+            img.src = images[counter];
+            containers.append(img);
+            counter++;
+
+        }, 2000)
+    }
+    startSlideshow();
+
+
+    /*----------/////////////////--------end slideshow--------------/////////////////////--------------------*/
+
+
+</script>

@@ -1,0 +1,28 @@
+
+.topnavbar {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 3px 0;
+    font-weight: inherit;
+    font-family: inherit;
+    color: rgb(105, 93, 93);
+    margin-left: 35%;
+    }
+
+
+ #topnavbar {
+    background-color: #eee;
+    }
+
+#navbar {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 10% 12% 12% 10% 8% 4%
+    }
+
+ #navbar > div > a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin: auto 1%;        
+    }

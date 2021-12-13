@@ -1,0 +1,68 @@
+*{
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+}
+
+#topNavBar img {
+width: 9%;
+margin: 2%;
+margin-top: 1%;
+margin-bottom: 1%;
+
+}
+
+#box > img{
+
+width: 100%;
+}
+h3{
+text-align: center;
+}
+.grid{
+display: flex;
+
+gap: 3%;
+justify-content: center;
+
+}
+.grid > div{
+
+border-radius: 10px;
+width: 22%;
+box-shadow: 0 0 20px -10px;
+}
+.grid img{
+width: 100%;
+
+}
+.grid > div:hover{
+border: 1px solid rgb(199, 6, 6);
+border-radius: 10px;
+width: 22%;
+box-shadow:  0 0 20px -8px;
+
+}
+#frequentlyAsked{
+width: 100%;
+background: #eee;
+margin-top:1%;
+
+
+}
+#frequentlyAsked > details{
+width: 66%;
+margin-left: 17%;
+margin-right: 17%;
+margin-top: 0.2%;
+background: white;
+padding: 1% 1% 1% 1%;
+border-radius: 5px;
+
+}
+.footer > img{
+width: 100%;
+}
+strong{
+color: rgb(201, 8, 8);
+font-weight: normal;
+}
