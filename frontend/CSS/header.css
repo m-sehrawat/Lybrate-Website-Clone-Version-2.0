@@ -1,0 +1,335 @@
+.row1H{
+    color: #be2528;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+}
+.row2H{
+    cursor: pointer;
+  margin-left: 40%;
+  font-size: 0.9rem;
+  color:rgb(5, 5, 5,0.8);
+}
+.healthFeedH{
+    cursor: pointer;
+    
+  margin-left: 1rem;
+    
+  font-size: 0.9rem;
+  color:rgb(5, 5, 5,0.8);
+}
+.forDoctorsH{
+    cursor: pointer;
+   
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color:rgb(5, 5, 5,0.8);
+
+}
+.signUpH{
+    text-decoration: none;
+    color: rgb(105, 93, 93); 
+    
+  margin-left: 1rem;
+
+  font-size: 0.9rem;
+  color:rgb(5, 5, 5,0.8);
+}
+
+.rowH{
+    margin-top: -0.3rem;
+    display: flex;
+   
+    height: 1.5rem;
+    background-color: #eeeeee;
+    border: none;
+    width: 100%;
+
+}
+
+#navbarH{
+
+   
+    display: flex;
+    height: 4.3rem;
+    border: 0.2px solid rgb(0, 0, 0,0.1);
+    width: 100%;
+    margin-bottom: -2rem;
+
+}
+
+#navbarH>div>a{
+  color:rgb(5, 5, 5,0.8);
+  font-size: 0.9rem;
+}
+.signUpH>a{
+  color:rgb(5, 5, 5);
+
+}
+
+#imgIn1H{
+    background-size: cover;
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    z-index: 100;
+}
+.imgDiv2H{
+    cursor: pointer;
+    display: flex;
+    margin-left: 9rem;
+ 
+    width: 20rem;
+}
+.imgDiv3H{
+    cursor: pointer;
+    display: flex;
+    margin-left: 1rem;
+ 
+    width: 20rem;
+}
+.imgDiv4H{
+    cursor: pointer;
+    margin-left: 1rem;
+   
+    width: 20rem;
+}
+.imgDiv5H{
+    cursor: pointer;
+    margin-left: 1rem;
+    
+    width: 20rem;
+}
+.imgDiv6H{
+    cursor: pointer;
+  
+  
+}
+.btnDiv6H{
+    cursor: pointer;
+    
+    width: 20rem;
+    
+}
+.btnDiv6H>a>button{
+    cursor: pointer;
+    
+
+    margin-top: 0.4rem;
+    height: 2.8rem;
+    width: 8rem;
+    border-radius: 48px;
+    border: none;
+    background-color: #c82e29;
+    color: white;
+}
+
+#cartImgH{
+    height: 4rem;
+    width: 4rem;
+    margin-left: -1rem;
+    
+}
+
+
+
+
+@media screen and (max-width: 1240px) {
+    
+    .row2H{
+        cursor: pointer;
+      margin-left: 1%;
+
+        margin-left: 28rem;
+       
+    }
+    .row1H{
+        display: none;
+    }
+    
+  }
+
+
+
+
+
+  @media screen and (max-width: 1000px) {
+    
+    .row2H{
+        cursor: pointer;
+      margin-left: 1%;
+
+        margin-left: 25rem;
+       
+    }
+    .row1H{
+        display: none;
+    }
+    
+    #imgIn1H{
+        background-size: cover;
+        width: 7rem;
+        height: 2rem;
+        margin-left: 1%;
+        margin-top: 1rem;
+    
+    }
+    #navbarH{
+       
+     
+        height: 5rem;
+    }
+
+     #navbarH>div{
+       margin-left: 1rem;
+      font-size: small;
+      margin-top: 1rem;
+}
+  }
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    
+    .row2H{
+        cursor: pointer;
+      margin-left: 1%;
+
+        margin-left: 4rem;
+       
+    }
+    .row1H{
+        display: none;
+    }
+    
+    #imgIn1H{
+        background-size: cover;
+        width: 7rem;
+        height: 2rem;
+        margin-left: 1%;
+        margin-top: 1rem;
+    
+    }
+    #navbarH{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        height: 15rem;
+    }
+
+     #navbarH>div{
+       margin-left: 1rem;
+      font-size: small;
+      margin-top: 1rem;
+}
+  }
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .row2H{
+        cursor: pointer;
+      margin-left: 1%;
+       
+    }
+    .row1H{
+        display: none;
+    }
+    
+    #imgIn1H{
+        background-size: cover;
+        width: 7rem;
+        height: 2rem;
+        margin-left: 1%;
+        margin-top: 1rem;
+    
+    }
+    #navbarH{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        height: 15rem;
+
+    }
+
+     #navbarH>div{
+       margin-left: 1rem;
+      font-size: small;
+      margin-top: 1rem;
+}
+.btnDiv6H>a>button{
+    cursor: pointer;
+    
+
+    margin-top: 0.4rem;
+    height: 2.2rem;
+    width: 6rem;
+}
+  }
+
+
+
+@media screen and (max-width: 420px) {
+    .row2H{
+        cursor: pointer;
+      margin-left: 1%;
+      font-size: small;
+       
+    }
+    .row1H{
+        display: none;
+        font-size: small;
+    }
+    
+    #imgIn1H{
+        background-size: cover;
+        width: 7rem;
+        height: 2rem;
+        margin-left: 1%;
+        margin-top: 1rem;
+    
+    }
+    #navbarH{
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+        height: 25rem;
+
+    }
+
+     #navbarH>div{
+       margin-left: 1rem;
+      font-size: small;
+      margin-top: 1rem;
+}
+
+.healthFeedH{
+    cursor: pointer;
+    
+  margin-left: 1rem;
+  font-size: small;
+    
+    
+}
+.forDoctorsH{
+    cursor: pointer;
+   
+  margin-left: 1rem;
+font-size: small;
+
+}
+.signUpH{
+    text-decoration: none;
+    color: rgb(105, 93, 93); 
+    
+  margin-left: 1rem;
+  font-size: small;
+
+
+}
+
+  }
+

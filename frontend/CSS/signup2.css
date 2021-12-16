@@ -1,0 +1,348 @@
+.container-fluid{
+    background-color: #eee;
+}
+.column1{
+    margin: 2% 0;
+}
+.p1{
+    text-align: center; 
+    color: rgb(189, 175, 175); 
+    font-size: 24px;
+}
+.column2{
+    padding-top: 3%;
+}
+#myForm{
+   border: 0.2px solidrgb(2, 2, 2,0.4);
+   width: 38%;
+   margin: auto;
+
+}
+.card-header{
+    border: 1px solid whitesmoke; 
+    background-color: white;
+}
+#signupid{
+    color: red;
+     margin-left: 5%;
+}
+.card-body{
+    border: 1px solid rgb(236, 225, 225); 
+    border-top: none;
+}
+#input1{
+    width: 97%;
+}
+
+option{
+    font-size: 14px;
+}
+#number{
+    width: 83%;
+}
+#password{
+    width: 97%;
+}
+#input2{
+    width: 97%;
+}
+.p2{
+    font-size: 10px;  
+    color: rgb(24, 19, 19);
+}
+#sp1{
+    color: red;
+}
+.p3{
+    text-align: center;
+     margin-top: 20px; 
+    margin-bottom: 0; 
+    font-size: 11px;
+}
+#sp2{
+    color: red;
+}
+
+
+
+input {
+    margin: 6% 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(114, 107, 107);
+    background-color: #eee;
+    }
+    
+    input:hover {
+    border-bottom: 1px solid red;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    }
+    
+    #btn {
+        width: 100%;
+        margin: auto;
+     
+    margin-top: 2rem;
+    height: 40px;
+    margin-bottom: 0%;
+    background-color: rgb(235, 51, 51);
+    color: white;
+    border: none; 
+    
+    }
+    #signinid:hover {
+    text-decoration: 2px underline red ;
+    margin-bottom: 10%;
+    
+    }
+    #anchorTag {
+    text-decoration: none;
+    color: black;
+    }
+    #list{
+        border: 00.1px solid rgb(10, 10, 10,0.3);
+        font-size: 0.9rem;
+    }
+
+
+
+
+@media screen and (max-width: 1240px) {
+    #myForm{
+        width: 38%;
+        margin: auto;
+   }
+   #btn {
+       
+       
+   margin-top: 1.6rem;
+   height: 2.5rem;
+   margin-bottom: 0%;
+   background-color: rgb(235, 51, 51);
+   color: white;
+   border: none; 
+   
+   }
+   
+   #p2{
+       font-size: 12px;  
+       color: rgb(24, 19, 19);
+     
+       
+       margin: auto;
+       
+    
+       
+   }
+   .text-left{
+       border: 1px solid whitesmoke; 
+       background-color: white;
+       font-size: small;
+      
+       margin: auto;
+    
+   }
+   #number{
+       width: 75%;
+       font-size: small;
+   }
+   #password{
+      
+       font-size: small;
+   }
+   .option{
+       font-size: small;
+   }
+   #list{
+       font-size: small;
+   }
+   #p1{
+       font-size: 1rem;
+   }
+   #sp2{
+
+   }
+  }
+
+
+@media screen and (max-width: 1000px) {
+    #myForm{
+        width: 40%;
+        margin: auto;
+   }
+   #btn {
+       
+       
+   margin-top: 1.6rem;
+   height: 2.5rem;
+   margin-bottom: 0%;
+   background-color: rgb(235, 51, 51);
+   color: white;
+   border: none; 
+   
+   }
+   
+   #p2{
+       font-size: 12px;  
+       color: rgb(24, 19, 19);
+     
+       
+       margin: auto;
+       
+    
+       
+   }
+   .text-left{
+       border: 1px solid whitesmoke; 
+       background-color: white;
+       font-size: small;
+      
+       margin: auto;
+    
+   }
+   #number{
+       width: 75%;
+       font-size: small;
+   }
+   #password{
+      
+       font-size: small;
+   }
+   .option{
+       font-size: small;
+   }
+   #list{
+       font-size: small;
+   }
+   #p1{
+       font-size: 1rem;
+   }
+   #sp2{
+
+   }
+  }
+
+
+
+  @media screen and (max-width: 800px) {
+    #myForm{
+        width: 55%;
+        margin: auto;
+   }
+   #btn {
+       
+       
+   margin-top: 1.6rem;
+   height: 2.5rem;
+   margin-bottom: 0%;
+   background-color: rgb(235, 51, 51);
+   color: white;
+   border: none; 
+   
+   }
+   
+   #p2{
+       font-size: 12px;  
+       color: rgb(24, 19, 19);
+     
+       
+       margin: auto;
+       
+    
+       
+   }
+   .text-left{
+       border: 1px solid whitesmoke; 
+       background-color: white;
+       font-size: small;
+      
+       margin: auto;
+    
+   }
+   #number{
+       width: 75%;
+       font-size: small;
+   }
+   #password{
+      
+       font-size: small;
+   }
+   .option{
+       font-size: small;
+   }
+   #list{
+       font-size: small;
+   }
+   #p1{
+       font-size: 1rem;
+   }
+   #sp2{
+
+   }
+  }
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    #myForm{
+         width: 90%;
+         margin: auto;
+    }
+    #btn {
+        
+        
+    margin-top: 1.6rem;
+    height: 2.5rem;
+    margin-bottom: 0%;
+    background-color: rgb(235, 51, 51);
+    color: white;
+    border: none; 
+    
+    }
+    
+    #p2{
+        font-size: 12px;  
+        color: rgb(24, 19, 19);
+      
+        
+        margin: auto;
+        
+     
+        
+    }
+    .text-left{
+        border: 1px solid whitesmoke; 
+        background-color: white;
+        font-size: small;
+       
+        margin: auto;
+     
+    }
+    #number{
+        width: 82%;
+        font-size: small;
+    }
+    #password{
+       
+        font-size: small;
+    }
+    .option{
+        font-size: small;
+    }
+    #list{
+        font-size: small;
+    }
+    #p1{
+        font-size: 1rem;
+    }
+    #sp2{
+
+    }
+  }
+
