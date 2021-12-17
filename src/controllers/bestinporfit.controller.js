@@ -7,17 +7,12 @@ const upload = require("../middlewares/upload");
 const router=express.Router();
 
 
-router.post("/", upload.single("productImages"), async(req,res)=>{
+router.post("/", async(req,res)=>{
 try{
-    const bestinporfit = await Bestinporfit.create({
+    const bestinporfit = await Bestinporfit.create(
 
-        img:req.file.path,
-        companyname:req.body.companyname,
-        name:req.body.name,
-        newprice:req.body.newprice,
-        oldprice:req.body.oldprice,
-        off:req.body.off
-    });
+       req.body
+    );
 
     return res.status(201).json({bestinporfit})
 
@@ -28,7 +23,7 @@ try{
 
 })
 
-router.post("/multiple", upload.any("productImages"), async(req,res)=>{
+router.post("/multiple", async(req,res)=>{
     const filePaths = req.files.map((file) => file.path)
     try{
         const bestinporfit = await Bestinporfit.create({
