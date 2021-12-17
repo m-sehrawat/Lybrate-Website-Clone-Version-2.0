@@ -13,6 +13,7 @@ const immunityController = require("./controllers/immunity.controller");
 const weightmanagementController = require("./controllers/weightmanagement.controller");
 const vitaminsController = require("./controllers/vitamins.controller");
 const searchproductController = require("./controllers/Searchproducts.controller");
+const feedDataController = require("./controllers/feedData.controller");
 
 app.use(express.json());
 
@@ -30,6 +31,7 @@ app.use("/immunities", immunityController);
 app.use("/weightmanagements", weightmanagementController);
 app.use("/vitamins", vitaminsController);
 app.use("/search", searchproductController);
+app.use("/feedData", feedDataController);
 
 
 module.exports = app;

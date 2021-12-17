@@ -70,11 +70,13 @@
     // --------------------Fetching data from own server------------------------
     async function fetchData() {
 
-        let response = await fetch(`http://localhost:2000/api/feedData`);
+        let response = await fetch(`http://localhost:3000/feedData`);
 
         let data = await response.json();
 
-        data = data.healthPackages
+        data = data[0];
+
+        data = data.healthPackages;
 
         appendData(data);
     }
