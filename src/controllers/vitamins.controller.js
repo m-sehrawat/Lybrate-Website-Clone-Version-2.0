@@ -2,7 +2,7 @@ const express =require("express");
 
 const Vitamins = require("../models/vitamins.model");
 
-const upload = require("../middlewares/uplaod");
+const upload = require("../middlewares/upload");
 
 const router=express.Router();
 

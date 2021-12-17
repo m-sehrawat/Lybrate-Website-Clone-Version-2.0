@@ -2,7 +2,7 @@ const express =require("express");
 
 const Weightmanagement = require("../models/weightmanagement.model");
 
-const upload = require("../middlewares/uplaod");
+const upload = require("../middlewares/upload");
 
 const router=express.Router();
 

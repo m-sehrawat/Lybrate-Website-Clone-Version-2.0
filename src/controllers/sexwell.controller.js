@@ -2,7 +2,7 @@ const express =require("express");
 
 const Sexwell = require("../models/sexwell.model");
 
-const upload = require("../middlewares/uplaod");
+const upload = require("../middlewares/upload");
 
 const router=express.Router();
 
