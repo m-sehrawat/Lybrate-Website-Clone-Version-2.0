@@ -243,7 +243,6 @@
     async function getdata(url, parent) {
         let res = await fetch(url);
         let data = await res.json();
-        console.log(data);
         showProducts(data, parent);
     }
     getdata("http://localhost:3000/bestinporfits", parent1);
@@ -257,7 +256,7 @@
     var timerId;
     let search = document.getElementById("searchproducts")
     async function searchproduct() {
-        let res = await fetch(`http://localhost:3000/api/Searchproducts`);
+        let res = await fetch(`http://localhost:3000/search`);
         let data = await res.json();
         return data;
     }
@@ -356,8 +355,6 @@
 
 
     /*-------------//////---------------slide show-------------------------/////-----------------*/
-
-
 
     function startSlideshow() {
 
