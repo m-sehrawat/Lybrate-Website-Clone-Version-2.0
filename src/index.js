@@ -15,18 +15,18 @@ const vitaminsController = require("./controllers/vitamins.controller");
 
 app.use(express.json());
 
-app.set("view engine", "ejs")
+// app.set("view engine", "ejs")
 
 app.post("/register", register);
 app.post("/login", login);
 app.use("/address", addressController);
 
-app.use("/bestinporfit", bestinporfitController);
-app.use("/newArrival", newArrivalController);
-app.use("/moneySaving", moneySavingController);
-app.use("/sexwell", sexwellController);
-app.use("/immunity", immunityController);
-app.use("/weightmanagement", weightmanagementController);
+app.use("/bestinporfits", bestinporfitController);
+app.use("/newarrivals", newArrivalController);
+app.use("/moneysavings", moneySavingController);
+app.use("/sexwells", sexwellController);
+app.use("/immunities", immunityController);
+app.use("/weightmanagements", weightmanagementController);
 app.use("/vitamins", vitaminsController);
 
 

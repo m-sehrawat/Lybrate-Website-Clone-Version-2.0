@@ -28,7 +28,7 @@
 
                 <div><a style="color: black;" href="signup.html">login/signup</a></div>
                 <span title="This feature coming soon" style="cursor: pointer;">
-                    <img  src="https://assets.lybrate.com/q_auto,f_auto,h_15,w_15/imgs/product/d2d/PatientGoldMembership/lybrate_icon_red_large.png" />
+                    <img src="https://assets.lybrate.com/q_auto,f_auto,h_15,w_15/imgs/product/d2d/PatientGoldMembership/lybrate_icon_red_large.png" />
                     LybrateCash
                 </span>
                 <a href="landingpage.html"><button class="btn btn-sm btn-outline-dark py-0">Home</button></a>
@@ -246,18 +246,18 @@
         console.log(data);
         showProducts(data, parent);
     }
-    getdata("http://localhost:3000/bestinporfit", parent1);
-    getdata("http://localhost:3000/newArrival", parent2);
-    getdata("http://localhost:3000/moneySaving", parent3);
-    getdata("http://localhost:3000/sexwell", parent4);
-    getdata("http://localhost:3000/immunity", parent5);
-    getdata("http://localhost:3000/weightmanagement", parent6);
-    getdata("http://localhost:3000/vitamines", parent7);
-  
+    getdata("http://localhost:3000/bestinporfits", parent1);
+    getdata("http://localhost:3000/newarrivals", parent2);
+    getdata("http://localhost:3000/moneysavings", parent3);
+    getdata("http://localhost:3000/sexwells", parent4);
+    getdata("http://localhost:3000/immunities", parent5);
+    getdata("http://localhost:3000/weightmanagements", parent6);
+    getdata("http://localhost:3000/vitamins", parent7);
+
     var timerId;
     let search = document.getElementById("searchproducts")
     async function searchproduct() {
-        let res = await fetch(`http://localhost:2000/api/Searchproducts`);
+        let res = await fetch(`http://localhost:3000/api/Searchproducts`);
         let data = await res.json();
         return data;
     }
