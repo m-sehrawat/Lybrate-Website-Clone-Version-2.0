@@ -6,11 +6,14 @@ body {
 margin:0px;
 padding:0px;
 }
+#navbar{
+    display: flex;background-color:rgb(200, 37, 6);height: 50px;width:100%;margin: auto;
+}
 #navbar>a{
 margin-left: 8%;
 margin-right: 4%;
 margin-top:.9%;
-
+width: 130px;
 }
 #navbar>a>img{
    width: 122px;height: 30px ;
@@ -22,7 +25,7 @@ background-size: contain;
    justify-content: space-evenly;
 }
 #suboption>a{
-   margin-left: 15px;
+    margin-left:15px;
     color: beige;
     font-size: medium;
     text-decoration: none;
@@ -34,7 +37,6 @@ background-size: contain;
     background-image: url("/frontend/GoodKartImages/backgroundImage-lybrateKeyboard.jpg");
     background-size: cover;     
 }
-
 #searhtop{
     width:65%;
     height: 100px;
@@ -58,7 +60,7 @@ background-size: contain;
     border: none;
 }
 #searchmid>input{
-    width: 75%;
+    width: 70%;
     height: 40px;
     margin-left: 6%;
     margin-top: 20px;
@@ -346,3 +348,48 @@ background-size: contain;
 button:hover{
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 768px) {
+    #navbar{
+        display: inline-block;
+        height: 80px;
+        }
+        #navbar>a{
+            margin-left: 8%;
+            margin-right: 4%;
+            margin-top:.9%;
+            width: 130px;
+            }
+        #navbar>a>img{
+            margin-top: 10px;
+            width: 122px;
+            height: 30px ;
+            background-size: contain;
+         }
+        #suboption{
+            display: inline-block;
+            margin-left: 10%;
+        }    
+        #suboption>a{
+            width: 130px;
+            color: beige;
+            font-size: medium;
+            text-decoration: none;
+        }
+        #searchmid>input{
+            margin-top: 80px;
+            width:60%;
+        }
+        #searchbottom{
+            margin-top:80px;
+            margin-left: 10%;
+        }
+        .subdocs>div>div:nth-child(2){
+            margin-left: 20%;
+        }
+        #whyLybratE>div{
+            margin-left: 3%;
+        }
+    }
+    
