@@ -11,7 +11,7 @@ const moneySavingController = require("./controllers/moneySaving.controller");
 const sexwellController = require("./controllers/sexwell.controller");
 const immunityController = require("./controllers/immunity.controller");
 const weightmanagementController = require("./controllers/weightmanagement.controller");
-
+const vitaminsController = require("./controllers/vitamins.controller");
 
 app.use(express.json());
 
@@ -27,7 +27,7 @@ app.use("/moneySaving", moneySavingController);
 app.use("/sexwell", sexwellController);
 app.use("/immunity", immunityController);
 app.use("/weightmanagement", weightmanagementController);
-
+app.use("/vitamins", vitaminsController);
 
 
 module.exports = app;
