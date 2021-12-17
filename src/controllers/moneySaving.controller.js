@@ -47,11 +47,18 @@ router.post("/multiple", upload.any("productImages"), async(req,res)=>{
     
         return res.status(500).json({ status :"failed", message : e.message})
     }
-    
-    
-    
         
     })
+
+    router.get("", async (req, res) => {
+        try {
+          const moneySaving = await MoneySaving.find().lean().exec();
+      
+          return res.send(moneySaving);
+        } catch (e) {
+          return res.status(500).json({ message: e.message, status: "Failed" });
+        }
+      });
 
 
 
