@@ -2,22 +2,27 @@
 #### About Lybrate
 >  Lybrate.com innovative online doctor database gives you access to over 150,000 highly trained medical experts. So you can ask a doctor anything you want, simple with a touch of a finger. You can save as much as 70% of your time and money at your next visit to the doctor and with the assurance that the medical professional you are seeing is highly trained and experienced. We use a stringent verification process to ensure you are 100% satisfied every time. Subscribe to the Lybrate Online Doctor network today to get the very best access to free questions, consultations and easy appointments.
 
-> In this project we have tried to enhance the cloning of “lybrate” website. We had build up all our efforts to do our best in this project. As, the Masai School's Mentorship  was specifically to build up our skills and we also accordingly implemented all that teachings in our project to look it at its best.
+> In this project we have tried to enhance the cloning of “lybrate” website using backend with validations, authentications and much more. We had build up all our efforts to do our best in this project. As, the Masai School's Mentorship  was specifically to build up our skills and we also accordingly implemented all that teachings in our project to look it at its best.
 > At  “lybrate”, we strive to keep you fit & healthy through a range of holistic offerings that include online consulting with doctors for any health issue. Now anyone can now stay healthy from the safety of their homes with just a single app that Not only does Lybrate give you access to online medical professionals, we also have regular blogs from respected experts that give you tips and advice on health and well being.
 
 # Video link:
  #### we have shared a demo presentation of this project "clone-lybrate".
- 
- https://drive.google.com/file/d/1R4vDIEcDr5kY9FHiggF9zWh-TGffXSzi/view?usp=sharing
+ ""
 
-# Technology We Used :computer: 
+# Technology We Used :computer:
+> Tech Stack in Frontend:
 1. HTML5
 2. CSS3
-3. Advanced JavaScript
-4. API’s
-5. ES6
-6. Json Server
-7. Bootstrap
+3. JavaScript
+
+
+> Tech Stack in Backend:
+1. Mongo DB
+2. CSS3
+3. Node JS
+4. Express JS
+5. EJS
+6. DB collections 
 
 
 # Features
@@ -38,8 +43,7 @@
 ### Login and Sign up Page:
 User need to login before purchasing products from “lybrate”. If user's are existing user they can login and if they are not existing user then they can register using sign up.
 
-#### Note:
-We created our own Json server so if you want to run our code then please read the instructions below
+
 
 ##### login page:
 To login User has to enter their Phone number and password to log into the website.
@@ -163,12 +167,14 @@ After successful payment, this page confirms you that your order is placed.
 
 
 ## Instructions to Run the Code 
-
-- Clone my repository `https://github.com/m-sehrawat/Lybrate-Website-Clone.git`
+#### Note:
+We created cloud server using MongoDb Atlas. So, if you want to run our code then please read the instructions below :
+- Clone our repository `https://github.com/m-sehrawat/Lybrate-Website-Clone-Version-2.0`
 - Open that code in your VS code `frontend/landingpage.html`
+- Open terminal in your VS Code and run the command `npm install` which will install all packages.
+- Open terminal in your VS Code and run the command `npm run server`
+- It will show a message that `JSON Server is running on port 3000`
 - Open the `landingpage.html` on Live server
-- Open terminal in your VS Code and run the command `node server.js`
-- It will show a message that `JSON Server is running on port 2000`
 - Then you can Navigate through other pages from Landing page like `goodcart.html`, `healthFeed.html` etc
 
 # Authors
