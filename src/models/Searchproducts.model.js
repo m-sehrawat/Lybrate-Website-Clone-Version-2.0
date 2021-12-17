@@ -11,7 +11,7 @@ const SearchproductsSchema = new mongoose.Schema({
 }, {
     versionKey: false,
     timestamps: true
-})
+});
 
 module.exports = mongoose.model("Searchproducts", SearchproductsSchema);
 

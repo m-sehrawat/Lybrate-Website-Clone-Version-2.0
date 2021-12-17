@@ -4,32 +4,11 @@ const SearchProduct = require("../models/Searchproducts.model");
 
 const router = express.Router();
 
+const { getAll, postOne } = require("../controllers/crud.controller");
 
-router.post("/", async (req, res) => {
-    try {
-        const searchproduct = await SearchProduct.create(req.body);
+router.post("/", postOne(SearchProduct));
 
-        return res.status(201).send(searchproduct)
-
-    } catch (e) {
-
-        return res.status(500).json({ status: "failed", message: e.message })
-    }
-
-})
-
-router.get("/", async (req, res) => {
-    try {
-        const searchproduct = await SearchProduct.find().lean().exec();
-
-        return res.send(searchproduct);
-
-    } catch (e) {
-
-        return res.status(500).json({ message: e.message, status: "Failed" });
-    }
-});
-
+router.get("/", getAll(SearchProduct));
 
 module.exports = router;
 
