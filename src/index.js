@@ -10,6 +10,7 @@ const newArrivalController = require("./controllers/newArrival.controller");
 const moneySavingController = require("./controllers/moneySaving.controller");
 const sexwellController = require("./controllers/sexwell.controller");
 const immunityController = require("./controllers/immunity.controller");
+const vitaminsController = require("./controllers/vitamins.controller");
 const weightmanagementController = require("./controllers/weightmanagement.controller");
 const vitaminsController = require("./controllers/vitamins.controller");
 
@@ -26,6 +27,7 @@ app.use("/newArrival", newArrivalController);
 app.use("/moneySaving", moneySavingController);
 app.use("/sexwell", sexwellController);
 app.use("/immunity", immunityController);
+app.use("/vitamins", vitaminsController);
 app.use("/weightmanagement", weightmanagementController);
 app.use("/vitamins", vitaminsController);
 
