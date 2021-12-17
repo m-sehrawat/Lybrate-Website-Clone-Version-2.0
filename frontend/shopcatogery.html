@@ -520,7 +520,7 @@
     var data;
     async function getallproducts() {
 
-        let res = await fetch(`http://localhost:2000/api/Searchproducts`);
+        let res = await fetch(`http://localhost:3000/search`);
         data = await res.json();
 
         appendData(data);
