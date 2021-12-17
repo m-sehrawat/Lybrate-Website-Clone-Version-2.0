@@ -12,6 +12,7 @@ const sexwellController = require("./controllers/sexwell.controller");
 const immunityController = require("./controllers/immunity.controller");
 const weightmanagementController = require("./controllers/weightmanagement.controller");
 const vitaminsController = require("./controllers/vitamins.controller");
+const searchproductController = require("./controllers/Searchproducts.controller");
 
 app.use(express.json());
 
@@ -28,21 +29,7 @@ app.use("/sexwells", sexwellController);
 app.use("/immunities", immunityController);
 app.use("/weightmanagements", weightmanagementController);
 app.use("/vitamins", vitaminsController);
+app.use("/search", searchproductController);
 
 
 module.exports = app;
-/*
-const express = require("express");
-
-const addressController = require("./controllers/address.controller");
-
-
-const app = express();
-app.use(express.json());
-
-app.set("view engine", "ejs")
-
-app.use("/users", addressController);
-
-module.exports = app;
-*/
