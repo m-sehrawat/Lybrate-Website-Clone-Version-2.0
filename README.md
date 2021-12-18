@@ -168,7 +168,7 @@ After successful payment, this page confirms you that your order is placed.
 
 ## Instructions to Run the Code 
 #### Note:
-We created cloud server using MongoDb Atlas. So, if you want to run our code then please read the instructions below :
+We created cloud database using MongoDb Atlas. So, if you want to run our code then please read the instructions below :
 - Clone our repository `https://github.com/m-sehrawat/Lybrate-Website-Clone-Version-2.0`
 - Open that code in your VS code `frontend/landingpage.html`
 - Open terminal in your VS Code and run the command `npm install` which will install all packages.
