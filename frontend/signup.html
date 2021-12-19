@@ -123,7 +123,11 @@
                 console.log('data:', data)
 
                 if (data.length == 1) {
-                    alert(`${data[0].param} is invalid, please enter correct one`)
+                    alert(`${data[0].param} is invalid, please enter correct one`);
+
+                } else if (data.status == "failed") {
+                    alert("Please enter different Email");
+
                 } else {
                     alert("Account Created Successfully");
                     window.location.href = "signin.html";
