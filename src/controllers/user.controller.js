@@ -32,6 +32,8 @@ router.post("/",
         }
     });
 
+router.get("/", getAll(User));
+
 router.post("/check", async (req, res) => {
     try {
         const items = await User.find({ $and: [{ email: req.body.email }, { password: req.body.password }] }).lean().exec();
