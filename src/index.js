@@ -1,9 +1,10 @@
 const express = require('express');
 
-const addressController = require("./controllers/address.controller");
+// const addressController = require("./controllers/address.controller");
 
 const app = express();
-const { register, login } = require("./controllers/user.controller");
+
+const userController = require("./controllers/user.controller");
 
 const bestinporfitController = require("./controllers/bestinporfit.controller");
 const newArrivalController = require("./controllers/newArrival.controller");
@@ -19,9 +20,11 @@ app.use(express.json());
 
 // app.set("view engine", "ejs")
 
-app.post("/register", register);
-app.post("/login", login);
-app.use("/address", addressController);
+// app.post("/register", register);
+// app.post("/login", login);
+// app.use("/address", addressController);
+
+app.use("/users", userController);
 
 app.use("/bestinporfits", bestinporfitController);
 app.use("/newarrivals", newArrivalController);

@@ -1,66 +1,50 @@
-require("dotenv").config();
-const jwt = require("jsonwebtoken");
+
+const express = require('express');
+
+const { body, validationResult } = require('express-validator');
+
 const User = require("../models/user.model");
 
-const newToken = (user) => {
-  return jwt.sign({ user: user }, process.env.JWT_ACCESS_KEY);
-};
+const { postOne, getAll } = require("../controllers/crud.controller");
 
-const register = async (req, res) => {
-  try {
-    // check if the email address provided already exist
-    let user = await User.findOne({ email: req.body.email }).lean().exec();
+const router = express.Router();
 
-    // if it already exists then throw an error
-    if (user)
-      return res.status(400).json({
-        status: "failed",
-        message: " Please provide a different email address",
-      });
+router.post("/",
 
-    // else we will create the user we will hash the password as plain text password is harmful
-    user = await User.create(req.body);
+    body("email").isEmail(),
 
-    // we will create the token
-    const token = newToken(user);
+    async (req, res) => {
 
-    // return the user and the token
-    res.status(201).json({ user, token });
-  } catch (e) {
-    return res.status(500).json({ status: "failed", message: e.message });
-  }
-};
+        const errors = validationResult(req);
 
-const login = async (req, res) => {
-  try {
-    // check if the email address provided already exist
-    let user = await User.findOne({ email: req.body.email });
+        if (!errors.isEmpty()) {
+            return res.status(400).json(errors.array());
+        }
 
-    // if it does not exist then throw an error
-    if (!user)
-      return res.status(400).json({
-        status: "failed",
-        message: " Please provide correct email address and password",
-      });
+        try {
+            const user = await User.create(req.body);
 
-    // else we match the password
-    const match = await user.checkPassword(req.body.password);
+            return res.status(201).json(user);
 
-    // if not match then throw an error
-    if (!match)
-      return res.status(400).json({
-        status: "failed",
-        message: " Please provide correct email address and password",
-      });
+        } catch (e) {
 
-    // if it matches then create the token
-    const token = newToken(user);
+            return res.status(500).json({ message: e.message, status: "failed" })
+        }
+    });
 
-    // return the user and the token
-    res.status(201).json({ user, token });
-  } catch (e) {
-    return res.status(500).json({ status: "failed", message: e.message });
-  }
-};
+router.post("/check", async (req, res) => {
+    try {
+        const items = await User.find({ $and: [{ email: req.body.email }, { password: req.body.password }] }).lean().exec();
 
-module.exports = { register, login };
+        return res.status(201).send(items);
+
+    } catch (e) {
+
+        return res.status(500).json({ message: e.message, status: "Failed" });
+    }
+});
+
+
+module.exports = router;
+
+
