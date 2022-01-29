@@ -5,6 +5,10 @@
 > In this project we have tried to enhance the cloning of “lybrate” website using backend with validations, authentications and much more. We had build up all our efforts to do our best in this project. As, the Masai School's Mentorship  was specifically to build up our skills and we also accordingly implemented all that teachings in our project to look it at its best.
 > At  “lybrate”, we strive to keep you fit & healthy through a range of holistic offerings that include online consulting with doctors for any health issue. Now anyone can now stay healthy from the safety of their homes with just a single app that Not only does Lybrate give you access to online medical professionals, we also have regular blogs from respected experts that give you tips and advice on health and well being.
 
+# Deployment link:
+ https://m-sehrawat.github.io/Lybrate-Website-Clone-Version-2.0/frontend/landingpage.html
+ 
+
 # Video link:
  #### we have shared a demo presentation of this project "clone-lybrate".
  https://drive.google.com/file/d/10dzxdQXBFoev6XhebczGTo7pruGhu-E1/view?usp=sharing
