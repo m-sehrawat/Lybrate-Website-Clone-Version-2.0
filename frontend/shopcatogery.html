@@ -41,15 +41,12 @@
             word-wrap: normal;
             white-space: nowrap;
             direction: ltr;
-
             /* Support for all WebKit browsers. */
             -webkit-font-smoothing: antialiased;
             /* Support for Safari and Chrome. */
             text-rendering: optimizeLegibility;
-
             /* Support for Firefox. */
             -moz-osx-font-smoothing: grayscale;
-
             /* Support for IE. */
             font-feature-settings: 'liga';
         }
@@ -533,9 +530,7 @@
     function appendData(data) {
         data_div.innerHTML = null;
         data.forEach((el) => {
-
             let div = document.createElement("div");
-
             let div1 = document.createElement("div");
             let image = document.createElement("img");
             image.src = el.img[0];
@@ -562,7 +557,6 @@
             span3.innerHTML = el.off;
             p.append(span1, span2, span3);
 
-
             let btn = document.createElement("button");
             btn.innerText = "Add to Cart"
             btn.onclick = function () {
@@ -572,12 +566,10 @@
                 btn.addEventListener("click", function () {
                     window.location.href = "cart.html"
                 });
-
             }
             div1.append(h4, p1, p, btn);
             div.append(image, div1);
             data_div.append(div);
-
         })
 
     }
@@ -595,7 +587,6 @@
     }
 
     function sortHtoL(data) {
-
         data.sort((a, b) => {
             return b.newprice - a.newprice;
         });
@@ -611,7 +602,6 @@
 
         let cart = JSON.parse(localStorage.getItem('addToCart'));
 
-
         let flag = false;
         cart.forEach((product) => {
             if (product.name == el.name) {
@@ -626,11 +616,7 @@
             alert(`Product is added to the Cart`);
         }
 
-        console.log(cart);
-
         localStorage.setItem('addToCart', JSON.stringify(cart));
     }
-
-
 
 </script>

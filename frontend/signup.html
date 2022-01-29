@@ -111,7 +111,7 @@
         } else {
 
             try {
-                let res = await fetch(`http://localhost:3000/users`, {
+                let res = await fetch(`https://lybrate-clone-part-2.herokuapp.com/users`, {
                     method: 'POST',
                     body: JSON.stringify(userData),
                     headers: {
@@ -120,7 +120,6 @@
                 });
 
                 let data = await res.json();
-                console.log('data:', data)
 
                 if (data.length == 1) {
                     alert(`${data[0].param} is invalid, please enter correct one`);

@@ -20,11 +20,6 @@
             background-color: #eeeeee;
         }
 
-        /* div {
-            border: 1px solid red;
-            min-height: 50px;
-        } */
-
         #mainBox {
             max-width: 1200px;
         }
@@ -85,14 +80,11 @@
 
         // ------------Getting userData from Local storage---------------
         let userData = JSON.parse(localStorage.getItem("priceDetails"))
-        console.log('userData:', userData)
 
         let { sumMRP, sumDiscount, count, sumCartTotal } = userData;
 
         // -----------------Display Total Price---------------------
         orderSummary(sumMRP, sumDiscount, count, sumCartTotal);
-
-
 
         // ----------------Sending Data to Local Storage------------------------------
         let proceedBtn = document.getElementById('proceedBtn');
@@ -107,7 +99,6 @@
         addMoreBtn.onclick = () => {
             window.location.href = "cart.html"
         }
-
 
         // ---------------------Display Box--------------------------------
         let productBox = document.getElementById('productBox');
@@ -135,7 +126,6 @@
                                         </div>
                                     </div>
                                 </div>`
-
 
 
         // -----------------Address Filling ----------------------

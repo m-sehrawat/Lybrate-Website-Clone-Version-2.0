@@ -533,7 +533,7 @@
     var timerId;
 
     async function searchnews() {
-        let res = await fetch(`http://localhost:3000/feedData`);
+        let res = await fetch(`https://lybrate-clone-part-2.herokuapp.com/feedData`);
         let data = await res.json();
         data = data[0];
         return data;
@@ -573,21 +573,14 @@
 
         let news_data = res;
 
-
-
         var search_data = [];
         let temp;
         for (key in news_data) {
             temp = key;
             if (temp.includes(name)) {
                 search_data.push(temp);
-
             }
-
         }
-
-
-
         appendnews(search_data);
     }
 
@@ -601,7 +594,6 @@
             func();
         }, delay);
     }
-
 
 
 </script>
