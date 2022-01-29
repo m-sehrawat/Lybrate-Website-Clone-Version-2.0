@@ -23,6 +23,8 @@ const getAll = (model) => async (req, res) => {
 }
 
 
+
+
 module.exports = {
     postOne,
     getAll,

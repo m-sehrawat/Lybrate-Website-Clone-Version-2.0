@@ -245,18 +245,18 @@
         let data = await res.json();
         showProducts(data, parent);
     }
-    getdata("http://localhost:3000/bestinporfits", parent1);
-    getdata("http://localhost:3000/newarrivals", parent2);
-    getdata("http://localhost:3000/moneysavings", parent3);
-    getdata("http://localhost:3000/sexwells", parent4);
-    getdata("http://localhost:3000/immunities", parent5);
-    getdata("http://localhost:3000/weightmanagements", parent6);
-    getdata("http://localhost:3000/vitamins", parent7);
+    getdata(`https://lybrate-clone-part-2.herokuapp.com/bestinporfits`, parent1);
+    getdata("https://lybrate-clone-part-2.herokuapp.com/newarrivals", parent2);
+    getdata("https://lybrate-clone-part-2.herokuapp.com/moneysavings", parent3);
+    getdata("https://lybrate-clone-part-2.herokuapp.com/sexwells", parent4);
+    getdata("https://lybrate-clone-part-2.herokuapp.com/immunities", parent5);
+    getdata("https://lybrate-clone-part-2.herokuapp.com/weightmanagements", parent6);
+    getdata("https://lybrate-clone-part-2.herokuapp.com/vitamins", parent7);
 
     var timerId;
     let search = document.getElementById("searchproducts")
     async function searchproduct() {
-        let res = await fetch(`http://localhost:3000/search`);
+        let res = await fetch(`https://lybrate-clone-part-2.herokuapp.com/search`);
         let data = await res.json();
         return data;
     }
@@ -294,7 +294,6 @@
         var search_data = [];
         product_data.forEach((el) => {
             if (el.name.includes(name)) {
-                console.log(el);
                 search_data.push(el);
             }
         });
@@ -382,8 +381,6 @@
     }
     startSlideshow();
 
-
     /*----------/////////////////--------end slideshow--------------/////////////////////--------------------*/
-
 
 </script>

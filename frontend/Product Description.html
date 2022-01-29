@@ -78,7 +78,6 @@
 </head>
 
 <body>
-
     <div id="headerDisplay"></div>
 
     <div class="container maxWidth">
@@ -111,7 +110,7 @@
             <div class="col-lg mainBox m-3">
 
                 <div id="productCompany">
-                   
+
                 </div>
                 <div id="productName"></div>
                 <div id="productPrice">
@@ -137,8 +136,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <p class="colorGrey"><strong>Disclaimer:</strong> While we ensure that all product information on the platform is complete and accurate, however, we advise you not to solely rely on this information. It is recommended to refer to the product manual and/or specifications provided by the manufacturer either on their website or along with the product. This is applicable for all warnings, labels, ingredients and usage directions as well. The use of any information provided on this platform is solely at the user's risk. Nothing contained on this platform shall be considered as medical advice. Consumers are advised to contact the manufacturer for any further information and assistance. The results from the products will vary from person to person, No individual result should be seen as typical.</p>
@@ -166,7 +163,7 @@
 
 
 <script>
-    let productCompany =document.getElementById("productCompany");
+    let productCompany = document.getElementById("productCompany");
     let productImage = document.getElementById("productImage");
     let productName = document.getElementById("productName");
     let productPrice = document.getElementById("productPrice");
@@ -177,12 +174,10 @@
 
 
     let product = JSON.parse(localStorage.getItem("Single_products"));
-    console.log('product:', product)
-
 
     function displayProducts(data) {
 
-        let { img,  companyname, name, newprice, oldprice, off } = data;
+        let { img, companyname, name, newprice, oldprice, off } = data;
 
         let image = document.createElement("img");
         image.src = img[0];
@@ -203,11 +198,11 @@
         img3.src = img[2];
         img3.style = "width:100%";
         img3.setAttribute('class', "img-fluid")
-        
+
         let company = document.createElement("p");
         company.innerText = companyname;
         company.setAttribute('class', "text-muted");
-        
+
         let heading = document.createElement("p");
         heading.innerText = name;
         heading.setAttribute('class', "fs-5 fw-bold");
@@ -250,7 +245,6 @@
         productImage.innerHTML = content;
     }
 
-
     // Add to Cart
     if (localStorage.getItem('addToCart') === null) {
         localStorage.setItem('addToCart', JSON.stringify([]))
@@ -275,29 +269,21 @@
             alert(`Product is added to the Cart`);
         }
 
-        console.log(cart);
-
         localStorage.setItem('addToCart', JSON.stringify(cart));
     }
 
     // --------------------Delivery availibiliy check----------------------
 
-    function pincodeCheck(){
+    function pincodeCheck() {
         let deliveryCheck = document.getElementById('deliveryCheck').value;
 
-        if(deliveryCheck.length != 6){
+        if (deliveryCheck.length != 6) {
             alert("Please enter a valid pincode");
-        }else if (deliveryCheck[0] == 1 || deliveryCheck[0] == 2 || deliveryCheck[0] == 3 || deliveryCheck[0] == 4) {
+        } else if (deliveryCheck[0] == 1 || deliveryCheck[0] == 2 || deliveryCheck[0] == 3 || deliveryCheck[0] == 4) {
             alert("Delivery is available in your Area");
         } else {
             alert("Delivery is not available in your Area");
         }
-
-
     }
-
-
-
-
 
 </script>

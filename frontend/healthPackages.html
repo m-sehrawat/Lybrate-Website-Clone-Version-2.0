@@ -70,7 +70,7 @@
     // --------------------Fetching data from own server------------------------
     async function fetchData() {
 
-        let response = await fetch(`http://localhost:3000/feedData`);
+        let response = await fetch(`https://lybrate-clone-part-2.herokuapp.com/feedData`);
 
         let data = await response.json();
 

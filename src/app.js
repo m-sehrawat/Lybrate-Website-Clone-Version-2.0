@@ -1,10 +1,11 @@
 const express = require('express');
 
-const addressController = require("./controllers/address.controller");
 
 const app = express();
-const { register, login } = require("./controllers/user.controller");
 
+app.use(express.json());
+
+const userController = require("./controllers/user.controller");
 const bestinporfitController = require("./controllers/bestinporfit.controller");
 const newArrivalController = require("./controllers/newArrival.controller");
 const moneySavingController = require("./controllers/moneySaving.controller");
@@ -15,14 +16,8 @@ const vitaminsController = require("./controllers/vitamins.controller");
 const searchproductController = require("./controllers/Searchproducts.controller");
 const feedDataController = require("./controllers/feedData.controller");
 
-app.use(express.json());
 
-// app.set("view engine", "ejs")
-
-app.post("/register", register);
-app.post("/login", login);
-app.use("/address", addressController);
-
+app.use("/users", userController);
 app.use("/bestinporfits", bestinporfitController);
 app.use("/newarrivals", newArrivalController);
 app.use("/moneysavings", moneySavingController);
@@ -34,4 +29,13 @@ app.use("/search", searchproductController);
 app.use("/feedData", feedDataController);
 
 
-module.exports = app;
+
+const port = process.env.PORT || 3000
+
+const connect = require("./configs/db");
+
+app.listen(port, async () => {
+    await connect();
+    console.log(`Listening to port ${port}`);
+});
+
