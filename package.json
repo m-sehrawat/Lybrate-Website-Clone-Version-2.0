@@ -8,10 +8,10 @@
     "express-validator": "^6.14.0",
     "mongoose": "^6.1.2"
   },
-  "devDependencies": {},
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon src/server.js"
+    "server": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",

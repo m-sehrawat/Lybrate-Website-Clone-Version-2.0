@@ -14,26 +14,26 @@ router.post(
     ),
 
   body("mobile")
-  .isLength({ min: 10, max: 10 })
-  .withMessage(
-    "mobile number should be 10 digits"
-  ),
+    .isLength({ min: 10, max: 10 })
+    .withMessage(
+      "mobile number should be 10 digits"
+    ),
   body("address")
-  .isLength({ min: 4, max: 20 })
-  .withMessage(
-    "address has to be at least 3 characters and maximum 20 characterss"
-  ),
- 
+    .isLength({ min: 4, max: 20 })
+    .withMessage(
+      "address has to be at least 3 characters and maximum 20 characterss"
+    ),
+
   body("city")
-  .isLength({ min: 3, max: 20 })
-  .withMessage(
-    "city has to be at least 3 characters and maximum 20 characterss"
-  ),
+    .isLength({ min: 3, max: 20 })
+    .withMessage(
+      "city has to be at least 3 characters and maximum 20 characterss"
+    ),
   body("pincode")
-  .isLength({ min: 6, max: 6 })
-  .withMessage(
-    "pincode should be 6 digits"
-  ),
+    .isLength({ min: 6, max: 6 })
+    .withMessage(
+      "pincode should be 6 digits"
+    ),
 
 
   async (req, res) => {
@@ -59,8 +59,8 @@ router.post(
   }
 );
 
-router.get("/", async function(req,res)  {
-return res.render("address")
+router.get("/", async function (req, res) {
+  return res.render("address")
 })
 
 module.exports = router;
