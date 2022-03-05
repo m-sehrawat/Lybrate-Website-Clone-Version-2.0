@@ -34,7 +34,7 @@ background-size: contain;
     width: 99.8%;
     height: 500px;
     border: 1px solid rgb(80, 80, 80);
-    background-image: url("/frontend/GoodKartImages/backgroundImage-lybrateKeyboard.jpg");
+    background-image: url("https://www.lybrate.com/img/backgroundImage-lybrateKeyboard.jpg");
     background-size: cover;     
 }
 #searhtop{
