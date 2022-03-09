@@ -6,7 +6,7 @@
 > At  “lybrate”, we strive to keep you fit & healthy through a range of holistic offerings that include online consulting with doctors for any health issue. Now anyone can now stay healthy from the safety of their homes with just a single app that Not only does Lybrate give you access to online medical professionals, we also have regular blogs from respected experts that give you tips and advice on health and well being.
 
 # Deployment link:
- https://m-sehrawat.github.io/Lybrate-Website-Clone-Version-2.0/frontend/landingpage.html
+https://m-sehrawat.github.io/Lybrate-Website-Clone-Version-2.0/frontend/landingpage.html
  
 
 # Video link:
